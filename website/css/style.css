@@ -27,3 +27,29 @@ div > p {
   background-color: green;
   color: white;
 }
+
+#frontend > li:first-child {
+  background-color: yellow;
+  color: blue;
+}
+
+#frontend li:nth-child(2) {
+  background-color: lime;
+  color: green;
+}
+
+#frontend > li:nth-child(4) {
+  color: magenta;
+}
+
+#frontend > li:nth-child(4) a {
+  color: cyan;
+}
+
+#h1-guys::before {
+  content: "🥳";
+}
+
+#h1-guys::after {
+  content: "🤓";
+}
