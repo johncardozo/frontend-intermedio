@@ -1,0 +1,29 @@
+/* Descendientes */
+div p {
+  color: green;
+}
+
+/* Hijos */
+div > p {
+  color: red;
+}
+
+#link-distrital {
+  background-color: red;
+  color: white;
+}
+
+#link-distrital:hover {
+  background-color: blue;
+  color: yellow;
+}
+
+.pais {
+  background-color: orange;
+  color: blue;
+}
+
+.pais:hover {
+  background-color: green;
+  color: white;
+}
