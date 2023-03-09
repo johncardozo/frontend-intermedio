@@ -1,59 +1,14 @@
-/* Descendientes */
-div p {
-  color: green;
+body {
+  background-color: #e06c75;
 }
 
-/* Hijos */
-div > p {
-  color: red;
-}
-
-#link-distrital {
-  background-color: red;
-  color: white;
-}
-
-#link-distrital:hover {
-  background-color: blue;
-  color: yellow;
-}
-
-.pais {
-  background-color: orange;
-  color: blue;
-}
-
-.pais:hover {
-  background-color: green;
-  color: white;
-}
-
-#frontend > li:first-child {
-  background-color: yellow;
-  color: blue;
-}
-
-#frontend li:nth-child(2) {
-  background-color: lime;
-  color: green;
-}
-
-#frontend > li:nth-child(4) {
-  color: magenta;
-}
-
-#frontend > li:nth-child(4) a {
-  color: cyan;
-}
-
-#h1-guys::before {
-  content: "🥳";
-}
-
-#h1-guys::after {
-  content: "🤓";
-}
-
-input[type="text"] {
-  background-color: pink;
+h1 {
+  /* Red - Green - Blue */
+  /* background-color: rgb(255, 0, 0); */
+  /* background-color: rgba(255, 0, 0, 0.502); */
+  /* background-color: #ff0000; */
+  /* background-color: #ff000079; */
+  /* Hue - Saturation - Lightness */
+  background-color: #4d4997;
+  color: #832121;
 }
