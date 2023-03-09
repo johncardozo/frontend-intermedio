@@ -53,3 +53,7 @@ div > p {
 #h1-guys::after {
   content: "🤓";
 }
+
+input[type="text"] {
+  background-color: pink;
+}
