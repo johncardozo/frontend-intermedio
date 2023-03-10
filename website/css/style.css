@@ -3,18 +3,18 @@ div {
   color: #690269;
   border: 1px solid #ff00ff;
 
-  /* Márgenes por separado */
-  margin-top: 10px;
-  margin-right: 20px;
-  margin-bottom: 5px;
-  margin-left: 50px;
+  /* Padding por separado */
+  padding-top: 10px;
+  padding-right: 20px;
+  padding-bottom: 5px;
+  padding-left: 50px;
 
-  /* Márgenes en una sola instrucción */
-  margin: 10px 20px 5px 50px;
+  /* Padding en una sola instrucción */
+  padding: 10px 20px 5px 50px;
 
-  /* Márgenes de 2 valores: arriba/abajo y derecha/izquierda */
-  margin: 20px 50px;
+  /* Padding de 2 valores: arriba/abajo y derecha/izquierda */
+  padding: 20px 50px;
 
-  /* Márgen de todo el box */
-  margin: 15px;
+  /* Padding de todo el box */
+  padding: 15px;
 }
