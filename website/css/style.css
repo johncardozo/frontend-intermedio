@@ -18,3 +18,17 @@ div {
   /* Padding de todo el box */
   padding: 15px;
 }
+
+.btn {
+  border: 1px solid #3d85c6;
+  background-color: #6aa84f;
+  color: #fff;
+  margin: 20px;
+  padding: 0px 30px;
+  border-radius: 5px;
+}
+.btn:hover {
+  background-color: #fff;
+  color: #6aa84f;
+  border: 1px solid #6aa84f;
+}
