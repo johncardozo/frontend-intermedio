@@ -1,55 +1,5 @@
 div {
-  /* Estilos
-  - solid
-  - dotted
-  - dashed 
-  - double 
-  - inset
-  */
-
-  /* Todo el borde con parámetros separados */
-  border-width: 3px;
-  border-color: #008000;
-  border-style: solid;
-
-  /* Todo el borde con parámetros */
-  border: 1px #4f4ff3 solid;
-
-  /* Radio de cada esquina por separado */
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 5px;
-  border-bottom-left-radius: 20px;
-  border-top-left-radius: 2px;
-
-  /* Radio de cada esquina en una instrucción */
-  border-radius: 10px 5px 20px 2px;
-
-  /* Radio para todas las esquinas */
-  border-radius: 5px;
-
-  /* Borde superior */
-  border-top-color: #ff0000;
-  border-top-width: 4px;
-  border-top-style: solid;
-
-  /* Borde derecho */
-  border-right-color: #008000;
-  border-right-width: 3px;
-  border-right-style: dotted;
-
-  /* Borde inferior */
-  border-bottom-color: #0000ff;
-  border-bottom-width: 2px;
-  border-bottom-style: dashed;
-
-  /* Borde izquierdo */
-  border-left-color: #ffa500;
-  border-left-width: 1px;
-  border-left-style: double;
-
-  /* Borde por separado con todos los parámetros */
-  border-top: 3px #ff0000 solid;
-  border-left: 2px #ffa500 dotted;
-  border-bottom: 1px #00ffff dashed;
-  border-right: 5px #ff00ff double;
+  background-color: #ffc0cb;
+  color: #690269;
+  border: 1px solid #ff00ff;
 }
