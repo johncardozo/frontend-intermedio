@@ -1,34 +1,65 @@
 div {
-  background-color: #ffc0cb;
-  color: #690269;
-  border: 1px solid #ff00ff;
-
-  /* Padding por separado */
-  padding-top: 10px;
-  padding-right: 20px;
-  padding-bottom: 5px;
-  padding-left: 50px;
-
-  /* Padding en una sola instrucción */
-  padding: 10px 20px 5px 50px;
-
-  /* Padding de 2 valores: arriba/abajo y derecha/izquierda */
-  padding: 20px 50px;
-
-  /* Padding de todo el box */
-  padding: 15px;
-}
-
-.btn {
-  border: 1px solid #3d85c6;
-  background-color: #6aa84f;
+  background-color: #0875a7;
   color: #fff;
   margin: 20px;
-  padding: 0px 30px;
-  border-radius: 5px;
+  text-align: center;
 }
-.btn:hover {
-  background-color: #fff;
-  color: #6aa84f;
-  border: 1px solid #6aa84f;
+
+a {
+  text-decoration: none;
+  border: 3px inset gray;
+  padding: 5px 20px;
+}
+
+p {
+  text-align: justify;
+  letter-spacing: 3px;
+  word-spacing: 10px;
+  line-height: 40px;
+  font-size: 2rem;
+}
+
+p span {
+  text-decoration: line-through;
+  font-style: italic;
+}
+
+ul li {
+  /* uppercase
+  lowercase
+  capitalize */
+  text-transform: capitalize;
+}
+
+h1 {
+  /* font-family: Georgia, "Times New Roman", Times, serif; */
+  /* font-family: monospace; */
+  font-family: "Open Sans", sans-serif;
+  /* font-style: italic; */
+}
+h1:nth-child(1) {
+  font-weight: 300;
+}
+h1:nth-child(2) {
+  font-weight: 400;
+}
+h1:nth-child(3) {
+  font-weight: 500;
+}
+h1:nth-child(4) {
+  font-weight: 600;
+}
+h1:nth-child(5) {
+  font-weight: 700;
+}
+h1:nth-child(6) {
+  font-weight: 800;
+}
+
+#principal {
+  font-size: 2rem;
+}
+
+#secundario {
+  font-size: 0.5em;
 }
