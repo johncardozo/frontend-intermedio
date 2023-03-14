@@ -1,69 +1,19 @@
-div {
-  background-color: #0875a7;
-  color: #fff;
-  margin: 20px;
-  text-align: center;
-}
-
-a {
-  text-decoration: none;
-  border: 3px inset gray;
-  padding: 5px 20px;
-}
-
-p {
-  text-align: justify;
-  letter-spacing: 3px;
-  word-spacing: 10px;
-  line-height: 40px;
-  font-size: 2rem;
-}
-
-p span {
-  text-decoration: line-through;
-  font-style: italic;
-}
-
-ul li {
-  /* uppercase
-  lowercase
-  capitalize */
-  text-transform: capitalize;
-}
-
 h1 {
-  /* font-family: Georgia, "Times New Roman", Times, serif; */
-  /* font-family: monospace; */
   font-family: "Open Sans", sans-serif;
-  /* font-style: italic; */
-}
-h1:nth-child(1) {
-  font-weight: 300;
-}
-h1:nth-child(2) {
-  font-weight: 400;
-}
-h1:nth-child(3) {
-  font-weight: 500;
-}
-h1:nth-child(4) {
-  font-weight: 600;
-}
-h1:nth-child(5) {
-  font-weight: 700;
-}
-h1:nth-child(6) {
-  font-weight: 800;
 }
 
-#principal {
-  font-size: 2rem;
+.home {
+  color: #0059ff;
 }
 
-#secundario {
-  font-size: 0.5em;
+.email {
+  color: #ffa500;
 }
 
-img {
-  width: 100px;
+.delete {
+  color: #960202;
+}
+
+.discord {
+  color: #5260e6;
 }
