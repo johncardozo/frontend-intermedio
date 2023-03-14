@@ -1,5 +1,25 @@
-ol {
-  margin-left: 40px;
-  /* list-style-type: circle; */
-  list-style-type: lower-greek;
+nav {
+  font-family: "Open sans", sans-serif;
+  font-size: 1.5rem;
+  background-color: #484a47;
+  height: 80px;
+  padding-top: 20px;
+  padding-left: 40px;
+  box-shadow: 0px 2px 10px #00000097;
+}
+nav ul {
+  list-style-type: none;
+}
+nav li {
+  display: inline-block;
+}
+nav a {
+  text-decoration: none;
+  color: #e0ac9d;
+  padding: 10px 20px;
+}
+nav a:hover {
+  border-bottom: 2px solid #e88873;
+  font-weight: 400;
+  color: #a37774;
 }
