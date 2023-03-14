@@ -1,19 +1,5 @@
-h1 {
-  font-family: "Open Sans", sans-serif;
-}
-
-.home {
-  color: #0059ff;
-}
-
-.email {
-  color: #ffa500;
-}
-
-.delete {
-  color: #960202;
-}
-
-.discord {
-  color: #5260e6;
+ol {
+  margin-left: 40px;
+  /* list-style-type: circle; */
+  list-style-type: lower-greek;
 }
