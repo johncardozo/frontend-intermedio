@@ -29,6 +29,40 @@
 .contenido {
   background-color: #bc93f9;
   grid-area: contenido;
+  display: flex;
+  gap: 50px;
+  /* flex-direction: column; */
+  flex-direction: row;
+  /* ALINEACION EN MAIN AXIS */
+  /* justify-content: flex-start; */
+  /* justify-content: flex-end; */
+  justify-content: center;
+  /* justify-content: space-between; */
+  /* justify-content: space-around; */
+  /* justify-content: space-evenly; */
+
+  /* ALINEACION EN CROSS AXIS */
+  align-items: flex-start;
+  /* align-items: flex-end; */
+  /* align-items: center; */
+
+  /* WRAP */
+  /* flex-wrap: nowrap; */
+  /* flex-wrap: wrap; */
+
+  /* ALINEACION DE CONTENIDO */
+  /* align-content: flex-start; */
+  /* align-content: flex-end; */
+  align-content: center;
+}
+.contenido .item {
+  width: 100px;
+  height: 100px;
+  background: #ffe837;
+  border: 2px solid #ff0000;
+}
+.contenido .item-diferente {
+  align-self: flex-end;
 }
 .footer {
   background-color: #f9f793;
