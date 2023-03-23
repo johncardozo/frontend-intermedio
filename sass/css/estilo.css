@@ -1,6 +1,13 @@
 body {
-  background-color: #ffffa8;
-  border: 5px solid #0000ff;
+  background-color: #47047e;
+}
+
+h1 {
+  color: #ffbb73;
+}
+
+p {
+  color: #ffbb73;
 }
 
 /*# sourceMappingURL=estilo.css.map */

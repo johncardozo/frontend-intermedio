@@ -1,4 +1,15 @@
+// Variables
+$color-fondo: #47047e;
+$color-fuente: #ffbb73;
+
 body {
-  background-color: #ffffa8;
-  border: 5px solid #0000ff;
+  background-color: $color-fondo;
+}
+
+h1 {
+  color: $color-fuente;
+}
+
+p {
+  color: $color-fuente;
 }
