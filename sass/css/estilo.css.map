@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":["../scss/estilo.scss"],"names":[],"mappings":"AAIA;EACE,kBAJY;;;AAOd;EACE,OAPa;;;AAUf;EACE,OAXa","file":"estilo.css"}
+{"version":3,"sourceRoot":"","sources":["../scss/estilo.scss","../scss/_variables.scss"],"names":[],"mappings":"AAEA;EACE,kBCHY;;;ADMd;EACE,OCNa;;;ADSf;EACE,OCVa","file":"estilo.css"}

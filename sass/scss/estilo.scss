@@ -1,6 +1,4 @@
-// Variables
-$color-fondo: #47047e;
-$color-fuente: #ffbb73;
+@import "variables";
 
 body {
   background-color: $color-fondo;
