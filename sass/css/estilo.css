@@ -5,6 +5,10 @@
   box-sizing: border-box;
 }
 
+.card {
+  background-color: red;
+}
+
 body {
   background-color: #bebebe;
 }

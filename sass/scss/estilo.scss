@@ -1,6 +1,7 @@
 @use "fuente";
 @use "reset";
 @use "variables" as v;
+@use "components";
 
 body {
   background-color: v.$color-fondo-principal;
