@@ -6,7 +6,25 @@
 }
 
 .card {
-  background-color: red;
+  display: block;
+  padding: 20px;
+  box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.3058823529);
+  font-family: "Montserrat", sans-serif;
+  margin: 20px;
+  background-color: #c7c7c7;
+  border-radius: 7px;
+}
+.card .card-title {
+  border-bottom: 1px solid #a0a0a0;
+  margin-bottom: 10px;
+}
+.card .card-body {
+  color: #3e3e3e;
+  font-size: 0.8rem;
+}
+.card .card-body a {
+  color: #005bc4;
+  text-decoration: none;
 }
 
 body {
