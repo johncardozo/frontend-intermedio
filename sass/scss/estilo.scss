@@ -1,13 +1,17 @@
-@import "variables";
+@use "fuente";
+@use "reset";
+@use "variables" as v;
 
 body {
-  background-color: $color-fondo;
+  background-color: v.$color-fondo-principal;
 }
 
 h1 {
-  color: $color-fuente;
+  color: v.$color-fuente;
+  font-family: v.$fuente-principal;
 }
 
 p {
-  color: $color-fuente;
+  color: v.$color-fuente;
+  font-family: v.$fuente-principal;
 }
