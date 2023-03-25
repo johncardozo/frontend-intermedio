@@ -1,3 +1,5 @@
+@use "sass:math";
+
 // Colores
 $color-fondo-principal: #bebebe;
 $color-fuente: #3e3e3e;
@@ -5,3 +7,25 @@ $color-link: #005bc4;
 
 // Fuentes
 $fuente-principal: "Montserrat", sans-serif;
+
+// Tamaño de fuentes
+$font-size-base: 1rem;
+$font-size-xsm: math.div($font-size-base, 2);
+$font-size-sm: $font-size-base * 0.75;
+$font-size-lg: $font-size-base * 1.5;
+$font-size-xl: $font-size-base * 2;
+$font-size-xxl: $font-size-base * 3;
+
+// Border radius
+$border-radius-base: 20px;
+$border-radius-sm: math.div($border-radius-base, 2);
+
+// Mostrar valores en la Terminal
+@debug "Universidad Distrital";
+@debug $font-size-xxl;
+@debug $font-size-base + 1;
+@debug $font-size-base - 0.5;
+@debug math.div(20, 2);
+@debug math.div(20, 3);
+@debug math.div(10px, 2);
+@debug $font-size-xsm;

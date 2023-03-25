@@ -7,19 +7,21 @@
   font-family: v.$fuente-principal;
   margin: 20px;
   background-color: #c7c7c7;
-  border-radius: 7px;
+  border-radius: v.$border-radius-sm;
 
   .card-title {
-    border-bottom: 1px solid #a0a0a0;
+    border-bottom: 1px solid #bcbcbc;
     margin-bottom: 10px;
+    font-size: v.$font-size-lg;
   }
 
   .card-body {
     color: v.$color-fuente;
-    font-size: 0.8rem;
+    font-size: v.$font-size-base;
     a {
       color: v.$color-link;
       text-decoration: none;
+      font-size: v.$font-size-xsm;
     }
   }
 }
