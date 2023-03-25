@@ -1,0 +1,28 @@
+// Map: lista de objetos separada por comas con key: value
+$colors: (
+  "primary": #5263fa,
+  "secondary": #fa52f7,
+  "error": #fa5252,
+  "info": #52bffa,
+  "success": #98fa52,
+  "warning": #faa952,
+  "white": #fff,
+  "black": #000,
+);
+
+// Mostrar un map
+@debug $colors;
+// Obtener valor dado el nombre del atributo
+@debug map-get($colors, "secondary");
+// Verifica si un map contiene un valor
+@debug map-has-key($colors, "error");
+@debug map-has-key($colors, "colorido");
+// Elimina una clave del map
+@debug map-remove($colors, "info");
+// Agregar un nuevo key: value
+@debug map-merge(
+  $colors,
+  (
+    "info": #52bffa,
+  )
+);

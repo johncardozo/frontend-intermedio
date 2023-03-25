@@ -1,0 +1,19 @@
+@use "fonts";
+@use "reset";
+@use "variables";
+@use "colors";
+@use "components";
+
+body {
+  background-color: variables.$color-fondo-principal;
+}
+
+h1 {
+  color: variables.$color-fuente;
+  font-family: variables.$fuente-principal;
+}
+
+p {
+  color: variables.$color-fuente;
+  font-family: variables.$fuente-principal;
+}

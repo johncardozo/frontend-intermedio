@@ -29,6 +29,12 @@
   font-size: 0.5rem;
 }
 
+.btn {
+  outline: none;
+  background-color: #5263fa;
+  color: #fff;
+}
+
 body {
   background-color: #bebebe;
 }
@@ -43,4 +49,4 @@ p {
   font-family: "Montserrat", sans-serif;
 }
 
-/*# sourceMappingURL=estilo.css.map */
+/*# sourceMappingURL=style.css.map */
