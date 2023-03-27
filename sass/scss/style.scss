@@ -3,6 +3,7 @@
 @use "variables";
 @use "colors";
 @use "components";
+@use "palette";
 
 body {
   background-color: variables.$color-fondo-principal;

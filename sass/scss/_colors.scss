@@ -11,18 +11,18 @@ $colors: (
 );
 
 // Mostrar un map
-@debug $colors;
+//@debug $colors;
 // Obtener valor dado el nombre del atributo
-@debug map-get($colors, "secondary");
+// @debug map-get($colors, "secondary");
 // Verifica si un map contiene un valor
-@debug map-has-key($colors, "error");
-@debug map-has-key($colors, "colorido");
+// @debug map-has-key($colors, "error");
+// @debug map-has-key($colors, "colorido");
 // Elimina una clave del map
-@debug map-remove($colors, "info");
+// @debug map-remove($colors, "info");
 // Agregar un nuevo key: value
-@debug map-merge(
-  $colors,
-  (
-    "info": #52bffa,
-  )
-);
+// @debug map-merge(
+//   $colors,
+//   (
+//     "info": #52bffa,
+//   )
+// );
