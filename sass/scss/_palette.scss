@@ -10,11 +10,17 @@
   .bg-#{$key} {
     background-color: $val;
   }
-  // Generación de variaciones
+  // Generación de variaciones claras
   @for $i from 1 through 9 {
+    // Variación texto claro
     .text-#{$key}-light-#{$i} {
       // color1, color2, porcentaje de mezcla
       color: mix(white, $val, $i * 10%);
+    }
+    // Variación background claro
+    .bg-#{$key}-light-#{$i} {
+      // color1, color2, porcentaje de mezcla
+      background-color: mix(white, $val, $i * 10%);
     }
   }
 }
