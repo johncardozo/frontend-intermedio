@@ -21,11 +21,11 @@ $border-radius-base: 20px;
 $border-radius-sm: math.div($border-radius-base, 2);
 
 // Mostrar valores en la Terminal
-@debug "Universidad Distrital";
-@debug $font-size-xxl;
-@debug $font-size-base + 1;
-@debug $font-size-base - 0.5;
-@debug math.div(20, 2);
-@debug math.div(20, 3);
-@debug math.div(10px, 2);
-@debug $font-size-xsm;
+// @debug "Universidad Distrital";
+// @debug $font-size-xxl;
+// @debug $font-size-base + 1;
+// @debug $font-size-base - 0.5;
+// @debug math.div(20, 2);
+// @debug math.div(20, 3);
+// @debug math.div(10px, 2);
+// @debug $font-size-xsm;
