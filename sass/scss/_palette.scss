@@ -1,6 +1,13 @@
 @use "colors" as c;
 
-// Recorre y muestra el map en la Terminal
+// Recorre el map para generar clases CSS
 @each $key, $val in c.$colors {
-  @debug $key, $val;
+  // Texto
+  .text-#{$key} {
+    color: $val;
+  }
+  // Background
+  .bg-#{$key} {
+    background-color: $val;
+  }
 }

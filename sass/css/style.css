@@ -35,6 +35,70 @@
   color: #fff;
 }
 
+.text-primary {
+  color: #5263fa;
+}
+
+.bg-primary {
+  background-color: #5263fa;
+}
+
+.text-secondary {
+  color: #fa52f7;
+}
+
+.bg-secondary {
+  background-color: #fa52f7;
+}
+
+.text-error {
+  color: #fa5252;
+}
+
+.bg-error {
+  background-color: #fa5252;
+}
+
+.text-info {
+  color: #52bffa;
+}
+
+.bg-info {
+  background-color: #52bffa;
+}
+
+.text-success {
+  color: #98fa52;
+}
+
+.bg-success {
+  background-color: #98fa52;
+}
+
+.text-warning {
+  color: #faa952;
+}
+
+.bg-warning {
+  background-color: #faa952;
+}
+
+.text-white {
+  color: #fff;
+}
+
+.bg-white {
+  background-color: #fff;
+}
+
+.text-black {
+  color: #000;
+}
+
+.bg-black {
+  background-color: #000;
+}
+
 body {
   background-color: #bebebe;
 }
@@ -46,6 +110,10 @@ h1 {
 
 p {
   color: #3e3e3e;
+  font-family: "Montserrat", sans-serif;
+}
+
+.text {
   font-family: "Montserrat", sans-serif;
 }
 
