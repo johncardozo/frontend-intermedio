@@ -23,4 +23,17 @@
       background-color: mix(white, $val, $i * 10%);
     }
   }
+  // Generación de variaciones oscuras
+  @for $i from 1 through 9 {
+    // Variación texto oscuro
+    .text-#{$key}-dark-#{$i} {
+      // color1, color2, porcentaje de mezcla
+      color: mix(black, $val, $i * 10%);
+    }
+    // Variación background oscuro
+    .bg-#{$key}-dark-#{$i} {
+      // color1, color2, porcentaje de mezcla
+      background-color: mix(black, $val, $i * 10%);
+    }
+  }
 }
