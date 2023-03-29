@@ -1,0 +1,19 @@
+@use "variables";
+
+body {
+  background-color: variables.$color-main-background;
+}
+
+h1 {
+  color: variables.$color-font;
+  font-family: variables.$font-base;
+}
+
+p {
+  color: variables.$color-font;
+  font-family: variables.$font-base;
+}
+
+.text {
+  font-family: variables.$font-base;
+}

@@ -1,24 +1,7 @@
 @use "fonts";
 @use "reset";
 @use "variables";
+@use "typography";
 @use "colors";
 @use "components";
 @use "palette";
-
-body {
-  background-color: variables.$color-fondo-principal;
-}
-
-h1 {
-  color: variables.$color-fuente;
-  font-family: variables.$fuente-principal;
-}
-
-p {
-  color: variables.$color-fuente;
-  font-family: variables.$fuente-principal;
-}
-
-.text {
-  font-family: variables.$fuente-principal;
-}

@@ -4,7 +4,7 @@
   display: block;
   padding: 20px;
   box-shadow: 2px 2px 7px #0000004e;
-  font-family: v.$fuente-principal;
+  font-family: v.$font-base;
   margin: 20px;
   background-color: #c7c7c7;
   border-radius: v.$border-radius-sm;
@@ -16,7 +16,7 @@
   }
 
   .card-body {
-    color: v.$color-fuente;
+    color: v.$font-base;
     font-size: v.$font-size-base;
     a {
       color: v.$color-link;

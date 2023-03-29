@@ -5,6 +5,24 @@
   box-sizing: border-box;
 }
 
+body {
+  background-color: #bebebe;
+}
+
+h1 {
+  color: #3e3e3e;
+  font-family: "Montserrat", sans-serif;
+}
+
+p {
+  color: #3e3e3e;
+  font-family: "Montserrat", sans-serif;
+}
+
+.text {
+  font-family: "Montserrat", sans-serif;
+}
+
 .card {
   display: block;
   padding: 20px;
@@ -20,7 +38,7 @@
   font-size: 1.5rem;
 }
 .card .card-body {
-  color: #3e3e3e;
+  color: "Montserrat", sans-serif;
   font-size: 1rem;
 }
 .card .card-body a {
@@ -1141,24 +1159,6 @@
 
 .cero-o-uno {
   color: red;
-}
-
-body {
-  background-color: #bebebe;
-}
-
-h1 {
-  color: #3e3e3e;
-  font-family: "Montserrat", sans-serif;
-}
-
-p {
-  color: #3e3e3e;
-  font-family: "Montserrat", sans-serif;
-}
-
-.text {
-  font-family: "Montserrat", sans-serif;
 }
 
 /*# sourceMappingURL=style.css.map */
