@@ -1251,6 +1251,34 @@
   background-color: black;
 }
 
+.generada-por-if {
+  color: red;
+}
+
+.generada-segundo-if {
+  color: cyan;
+}
+
+.menor-5 {
+  color: blue;
+}
+
+.igual-20 {
+  color: blue;
+}
+
+.d-ninguna {
+  color: black;
+}
+
+.infant {
+  color: white;
+}
+
+.cero-o-uno {
+  color: red;
+}
+
 body {
   background-color: #bebebe;
 }

@@ -37,3 +37,83 @@
     }
   }
 }
+
+// Condicional IF con constantes
+@if (5 > 1) {
+  .generada-por-if {
+    color: red;
+  }
+}
+// Condicional IF con variables
+$a: 5;
+@if ($a > 3) {
+  .generada-segundo-if {
+    color: cyan;
+  }
+}
+
+// Condicional if/else
+$b: 2;
+@if ($b > 5) {
+  .mayor-5 {
+    color: red;
+  }
+} @else {
+  .menor-5 {
+    color: blue;
+  }
+}
+
+// Condicional if/else/if anidados
+$c: 20;
+@if ($c == 10) {
+  .igual-10 {
+    color: yellow;
+  }
+} @else {
+  @if ($c == 20) {
+    .igual-20 {
+      color: blue;
+    }
+  } @else {
+    .diferente-10-20 {
+      color: red;
+    }
+  }
+}
+
+// Condicional if/else/if
+$d: 40;
+@if ($d == 10) {
+  .d-10 {
+    color: yellow;
+  }
+} @else if ($d == 20) {
+  .d-20 {
+    color: blue;
+  }
+} @else if ($d == 30) {
+  .d-30 {
+    color: red;
+  }
+} @else {
+  .d-ninguna {
+    color: black;
+  }
+}
+
+// AND
+// V -> Todos debe ser Verdaderos
+$edad: 1;
+@if ($edad >= 0 and $edad <= 10) {
+  .infant {
+    color: white;
+  }
+}
+// OR
+// V -> Al menos uno debe ser verdadero
+@if ($edad == 0 or $edad == 1) {
+  .cero-o-uno {
+    color: red;
+  }
+}
