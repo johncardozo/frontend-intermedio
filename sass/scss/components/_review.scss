@@ -29,7 +29,15 @@
   }
   &__more {
     $color-fondo: map-get(c.$colors, "primary");
-    background-color: $color-fondo;
+    // background-color: $color-fondo;
+    background-image: linear-gradient(
+      to right top,
+      #401300,
+      #73380f,
+      #a46511,
+      #cd990c,
+      #ebd312
+    );
     color: map-get(c.$colors, "white");
     text-decoration: none;
     padding: 5px 10px;
