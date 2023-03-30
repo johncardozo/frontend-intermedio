@@ -53,6 +53,42 @@ p {
   color: #fff;
 }
 
+.review {
+  display: grid;
+  grid-template: 1fr auto/1fr;
+  border: 2px solid magenta;
+}
+.review__header {
+  background-color: #5263fa;
+}
+.review__header-title {
+  color: #fff;
+  padding: 1rem;
+}
+.review__body {
+  background-color: #fff;
+  padding: 1rem;
+}
+.review__body p {
+  color: #000;
+}
+.review__user {
+  background-color: #52bffa;
+  padding: 0.5rem;
+  margin-top: 0.6rem;
+  cursor: pointer;
+}
+.review__more {
+  background-color: #5263fa;
+  color: #fff;
+  text-decoration: none;
+  padding: 5px 10px;
+  border-radius: 10px;
+}
+.review__more:hover {
+  background-color: #3945af;
+}
+
 .text-primary {
   color: #5263fa;
 }
@@ -1131,34 +1167,6 @@ p {
 
 .bg-black {
   background-color: #000;
-}
-
-.generada-por-if {
-  color: red;
-}
-
-.generada-segundo-if {
-  color: cyan;
-}
-
-.menor-5 {
-  color: blue;
-}
-
-.igual-20 {
-  color: blue;
-}
-
-.d-ninguna {
-  color: black;
-}
-
-.infant {
-  color: white;
-}
-
-.cero-o-uno {
-  color: red;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,0 +1,41 @@
+@use "../colors" as c;
+
+.review {
+  display: grid;
+  grid-template: 1fr auto / 1fr;
+  border: 2px solid magenta;
+
+  &__header {
+    background-color: map-get(c.$colors, "primary");
+    &-title {
+      color: map-get(c.$colors, "white");
+      padding: 1rem;
+    }
+  }
+
+  &__body {
+    background-color: map-get(c.$colors, "white");
+    padding: 1rem;
+    p {
+      color: map-get(c.$colors, "black");
+    }
+  }
+
+  &__user {
+    background-color: map-get(c.$colors, "info");
+    padding: 0.5rem;
+    margin-top: 0.6rem;
+    cursor: pointer;
+  }
+  &__more {
+    $color-fondo: map-get(c.$colors, "primary");
+    background-color: $color-fondo;
+    color: map-get(c.$colors, "white");
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 10px;
+    &:hover {
+      background-color: mix(black, $color-fondo, 30%);
+    }
+  }
+}
