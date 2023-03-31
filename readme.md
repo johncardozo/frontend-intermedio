@@ -9,3 +9,7 @@ Permite generar archivos CSS a partir de un archivo fuente SCSS
 por ejemplo,
 
     sass estilo.scss estilo.css
+
+## Instrucción para minimizar CSS
+
+    sass --watch scss/style.scss dist/style.min.css --style compressed
