@@ -1,0 +1,12 @@
+@function sumar($num1, $num2) {
+  // Suma los parámetros
+  $resultado: $num1 + $num2 + 10;
+  // Retorna el valor final
+  @return $resultado;
+}
+
+.div-alto {
+  width: sumar(50, 50) * 2px; // 220px
+  height: sumar(100, 200) * 1px; // 310px
+  background-color: red;
+}
