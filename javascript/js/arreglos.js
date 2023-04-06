@@ -104,3 +104,57 @@ console.log("numeros", numeros);
 numeros.splice(3, 1);
 console.log("splice: elimina una posición");
 console.log("numeros", numeros);
+
+// Obtiene una posición en el arreglo
+console.log(numeros.at(-1));
+console.log(numeros.at(-2));
+
+// Concatenar arreglos
+let nuevos = [12, 13, 22];
+let concatenado = numeros.concat(nuevos);
+console.log("concatenado", concatenado);
+
+// Funciones avanzadas
+let valores = [100, 200, 300, 400];
+console.log(valores);
+
+// reduce -> aplica una función retornado un valor
+let res1 = valores.reduce((x, y) => x + y);
+console.log(res1);
+
+// map -> aplica una función a cada elemento del arreglo
+let res2 = valores.map((valor) => valor + 1);
+console.log(res2);
+
+let notas = [4.5, 3.4, 2.1, 3.9, 1.5, 4.8, 0.6];
+let res3 = notas.map((nota) => {
+  if (nota > 3) {
+    return true;
+  } else {
+    return false;
+  }
+});
+console.log(notas);
+console.log(res3);
+
+let res4 = notas.map((nota) => (nota > 3 ? true : false));
+console.log(res4);
+
+let res5 = notas.map((nota) => nota > 3);
+console.log(res5);
+
+// Longitud
+let longitud = notas.length;
+console.log(longitud);
+
+// Ordenar un arreglo
+notas.sort();
+console.log(notas);
+
+// Invertir un arreglo
+notas.reverse();
+console.log(notas);
+
+// Chaining
+notas.sort().reverse();
+console.log(notas);
