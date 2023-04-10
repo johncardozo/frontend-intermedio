@@ -158,3 +158,27 @@ console.log(notas);
 // Chaining
 notas.sort().reverse();
 console.log(notas);
+
+// forEach
+const elementos = [11, 20, 33, 40];
+let mensaje = "";
+elementos.forEach((e) => {
+  mensaje += e + " | ";
+});
+console.log(mensaje);
+
+// every -> true | false -> AND a todos los elementos
+let todos = elementos.every((elemento) => elemento % 2 === 0);
+console.log("Todos", todos);
+
+// some -> true | false -> OR a todos los elementos
+let alguno = elementos.some((elemento) => elemento === 50);
+console.log("Alguno", alguno);
+
+// Filter
+let filtrados = elementos.filter((elemento) => elemento % 2 === 0);
+console.log("Filtro", filtrados);
+
+const elementoAEliminar = 20;
+let filtrados2 = elementos.filter((elemento) => elemento !== elementoAEliminar);
+console.log("Filtro2", filtrados2);
