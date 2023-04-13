@@ -1,21 +1,18 @@
-// Obtiene un elemento dado su id
+// Obtiene el elemento
 const titulo = document.getElementById("titulo");
-console.log(titulo);
+const link = document.getElementById("link");
 
-// Obtiene elementos dado el tag
-const liList = document.getElementsByTagName("li");
-console.log(liList);
+// Modifica el texto del elemento
+titulo.textContent = "Frontend Avanzado";
 
-// Obtiene elementos dada una clase CSS
-const msgList = document.getElementsByClassName("mensaje");
-console.log(msgList);
+// Modifica el valor de un atributo de un elemento
+link.href = "https://www.amazon.com";
 
-// Obtiene varios elementos dado un selector
-// Retorna una lista vacia si no encuentra elementos
-const hijos = document.querySelectorAll("ul li");
-console.log(hijos);
+const img1 = document.getElementById("img1");
+const img2 = document.getElementById("img2");
 
-// Obtiene un elemento dado un selector
-// Retorna null si no encuentra el elemento
-const hijo = document.querySelector("ul li");
-console.log(hijo);
+// Obtiene el valor de un atributo
+const srcImg1 = img1.getAttribute("src");
+console.log(srcImg1);
+// Modifica el atributo de un elemento
+img2.setAttribute("src", srcImg1);
