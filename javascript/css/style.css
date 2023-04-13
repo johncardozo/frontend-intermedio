@@ -1,3 +1,24 @@
 img {
   width: 100px;
 }
+
+#lista {
+  /* kebab-style */
+  background-color: #0647bf;
+}
+
+.btn {
+  background-color: #0b547e;
+  color: #fff;
+  outline: none;
+  border: 0;
+  border-radius: 7px;
+  padding: 5px 15px;
+  cursor: pointer;
+}
+.btn:hover {
+  background-color: #052f45;
+}
+.border {
+  border: 2px solid #780000;
+}
