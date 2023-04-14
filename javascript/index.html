@@ -9,17 +9,16 @@
     <script src="js/app.js" defer></script>
   </head>
   <body>
-    <script>
-      function mensaje() {
-        alert("Este es un mensaje desde el H2");
-      }
-    </script>
-    <h1 id="titulo" onclick="alert('Me hicieron click!')">
-      Frontend Intermedio
-    </h1>
-    <h2 onclick="alerta()">HTML + CSS + JS</h2>
-    <h1 onclick="this.textContent='Medellín'">Bogotá</h1>
-    <h1 id="tituloJavascript">Javascript</h1>
-    <h1 id="tituloFecha">Click here to show current date!</h1>
+    <div id="indicador"></div>
+    <button id="boton">Botón</button>
+    <hr />
+    <a id="linkMenu" href="#">menu</a>
+    <div id="menu" style="display: none">
+      <ul>
+        <li>home</li>
+        <li>services</li>
+        <li>contact</li>
+      </ul>
+    </div>
   </body>
 </html>

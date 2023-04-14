@@ -1,38 +1,30 @@
-function alerta() {
-  alert("Hello");
-}
+const boton = document.getElementById("boton");
+const indicador = document.getElementById("indicador");
+const mouseClickHandler = () => {
+  indicador.classList.add("click");
+  indicador.classList.remove("over");
+  indicador.classList.remove("out");
+};
+const mouseOverHandler = () => {
+  indicador.classList.add("over");
+  indicador.classList.remove("click");
+  indicador.classList.remove("out");
+};
+const mouseOutHandler = () => {
+  indicador.classList.add("out");
+  indicador.classList.remove("over");
+  indicador.classList.remove("click");
+};
+boton.addEventListener("click", mouseClickHandler);
+boton.addEventListener("mouseover", mouseOverHandler);
+boton.addEventListener("mouseout", mouseOutHandler);
 
-// Obtiene el elemento HTML
-const tituloJavascript = document.getElementById("tituloJavascript");
+const linkMenu = document.getElementById("linkMenu");
+const menu = document.getElementById("menu");
 
-function mostrarFecha() {
-  const fechaActual = new Date();
-  console.log(fechaActual);
-}
-
-// Asocia un evento a un elemento
-// NO SE ESCRIBEN LOS PARÉNTESIS DE LA FUNCIÓN
-tituloJavascript.onclick = mostrarFecha;
-
-// Obtiene una referencia al elemento
-const tituloFecha = document.getElementById("tituloFecha");
-
-// El elemento escucha el evento click
-tituloFecha.addEventListener("click", mostrarFecha);
-tituloFecha.addEventListener("click", function () {
-  console.log("Hello 1");
+linkMenu.addEventListener("mouseover", () => {
+  menu.style.display = "block";
 });
-tituloFecha.addEventListener("click", () => {
-  // Obtiene la fecha actual
-  const fecha = new Date();
-  // Obtiene el día actual
-  const day = fecha.getDate();
-  // Muestra el día actual
-  tituloFecha.textContent = day;
-  // Verifica si el dia de hoy está en la primera o segunda quincena
-  if (day >= 1 && day <= 15) {
-    tituloFecha.classList.add("primera-quincena");
-  } else {
-    tituloFecha.classList.add("segunda-quincena");
-  }
+linkMenu.addEventListener("mouseout", () => {
+  menu.style.display = "none";
 });

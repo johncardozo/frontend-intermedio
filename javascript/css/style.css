@@ -1,8 +1,17 @@
-.primera-quincena {
-  background: navy;
-  color: white;
+#indicador {
+  width: 200px;
+  height: 200px;
 }
-.segunda-quincena {
-  background: green;
-  color: white;
+
+.over {
+  background-color: green;
+}
+.out {
+  background-color: red;
+}
+.click {
+  background-color: blue;
+}
+#menu {
+  background: #072f70;
 }
