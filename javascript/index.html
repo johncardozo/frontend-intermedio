@@ -9,15 +9,17 @@
     <script src="js/app.js" defer></script>
   </head>
   <body>
-    <h1 id="titulo">Frontend Intermedio</h1>
-    <a id="link" href="https://chat.openai.com">Chat GPT</a>
-    <img id="img1" src="img/sun.png" alt="sun" />
-    <img id="img2" src="img/moon.png" alt="moon" />
-    <ul id="lista">
-      <li>Eliana</li>
-      <li>José</li>
-      <li>Juan Carlos</li>
-    </ul>
-    <button id="boton">Click me!</button>
+    <script>
+      function mensaje() {
+        alert("Este es un mensaje desde el H2");
+      }
+    </script>
+    <h1 id="titulo" onclick="alert('Me hicieron click!')">
+      Frontend Intermedio
+    </h1>
+    <h2 onclick="alerta()">HTML + CSS + JS</h2>
+    <h1 onclick="this.textContent='Medellín'">Bogotá</h1>
+    <h1 id="tituloJavascript">Javascript</h1>
+    <h1 id="tituloFecha">Click here to show current date!</h1>
   </body>
 </html>

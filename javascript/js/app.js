@@ -1,34 +1,38 @@
-// Obtiene el elemento
-const titulo = document.getElementById("titulo");
-const link = document.getElementById("link");
+function alerta() {
+  alert("Hello");
+}
 
-// Modifica el texto del elemento
-titulo.textContent = "Frontend Avanzado";
+// Obtiene el elemento HTML
+const tituloJavascript = document.getElementById("tituloJavascript");
 
-// Modifica el valor de un atributo de un elemento
-link.href = "https://www.amazon.com";
+function mostrarFecha() {
+  const fechaActual = new Date();
+  console.log(fechaActual);
+}
 
-const img1 = document.getElementById("img1");
-const img2 = document.getElementById("img2");
+// Asocia un evento a un elemento
+// NO SE ESCRIBEN LOS PARÉNTESIS DE LA FUNCIÓN
+tituloJavascript.onclick = mostrarFecha;
 
-// Obtiene el valor de un atributo
-const srcImg1 = img1.getAttribute("src");
-console.log(srcImg1);
-// Modifica el atributo de un elemento
-img2.setAttribute("src", srcImg1);
+// Obtiene una referencia al elemento
+const tituloFecha = document.getElementById("tituloFecha");
 
-// Obtiene la lista
-const lista = document.getElementById("lista");
-console.log(lista);
-// Cambiar el estilo
-lista.style.color = "orange";
-// camelCase
-lista.style.backgroundColor = "green";
-
-// Obtiene el botón
-const boton = document.getElementById("boton");
-// Agrega una clase CSS al elemento
-boton.classList.add("btn");
-boton.classList.add("border");
-// Elimina una clase CSS del elemento
-boton.classList.remove("btn");
+// El elemento escucha el evento click
+tituloFecha.addEventListener("click", mostrarFecha);
+tituloFecha.addEventListener("click", function () {
+  console.log("Hello 1");
+});
+tituloFecha.addEventListener("click", () => {
+  // Obtiene la fecha actual
+  const fecha = new Date();
+  // Obtiene el día actual
+  const day = fecha.getDate();
+  // Muestra el día actual
+  tituloFecha.textContent = day;
+  // Verifica si el dia de hoy está en la primera o segunda quincena
+  if (day >= 1 && day <= 15) {
+    tituloFecha.classList.add("primera-quincena");
+  } else {
+    tituloFecha.classList.add("segunda-quincena");
+  }
+});
