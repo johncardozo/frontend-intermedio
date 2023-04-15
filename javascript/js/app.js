@@ -1,50 +1,44 @@
-// Obtiene referencia al elemento
-const area = document.getElementById("area");
+const section = document.querySelector("section");
 
-// Obtiene los hijos del elemento
-const hijos = area.children;
-console.log(hijos);
+// Crear un elemento DOM
+// <article></article>
+const article = document.createElement("article");
+const article2 = document.createElement("article");
 
-// Recorre la lista de hijos
-for (const hijo of hijos) {
-  console.log(hijo.textContent);
-}
-console.log(`La cantidad de hijos del div es ${hijos.length}`);
+// <article>Nuevo artículo</article>
+article.textContent = "Nuevo artículo";
+article2.textContent = "Otro artículo";
 
-// Obtiene el primer hijo
-const primerHijo = area.firstElementChild;
-console.log(primerHijo);
+// Agrega el nuevo elemento a un elemento elemento existente
+section.appendChild(article);
+section.appendChild(article2);
 
-// Obtiene el último hijo
-const ultimoHijo = area.lastElementChild;
-console.log(ultimoHijo);
+// Agrega código HTML plano
+const nuevoElemento = document.createElement("div");
+nuevoElemento.innerHTML = `<h1>Titulo</h1><p>parrafo</p><span>texto</span>`;
+section.appendChild(nuevoElemento);
 
-// Obtiene un hijo dada la posición
-const algunHijo = hijos[1];
-console.log(algunHijo);
-console.log(area.children[2]);
+// Crea 2 elementos
+const h2 = document.createElement("h2");
+h2.textContent = "Soy un H2";
+const h3 = document.createElement("h3");
+h3.textContent = "Soy un H3";
 
-// Obtiene la referencia a los elementos
-const titulo = document.getElementById("titulo");
-const parrafo = document.getElementById("parrafo");
+// Agrega varios elementos a la vez
+section.append(h2, h3);
 
-console.log(titulo);
-console.log(parrafo);
+// Crea 2 elementos
+const titulo1 = document.createElement("h2");
+titulo1.textContent = "Soy el titulo 1";
+const titulo2 = document.createElement("h3");
+titulo2.textContent = "Soy el titulo 2";
 
-// Obtiene el padre de un elemento
-const padre = titulo.parentElement;
-console.log(padre);
+// Arreglo de elementos
+const titulos = [titulo1, titulo2];
 
-// Obtiene el ultimo hijo del padre
-console.log(padre.lastElementChild);
+// Desestructuración de elementos de un arreglo
+section.append(...titulos);
 
-// Chaining invocación de propiedades
-console.log(parrafo.parentElement.lastElementChild);
-
-// Obtiene el articulo
-const articulo = document.querySelector("article");
-console.log(articulo);
-
-// Obtiene el padre del padre (chaining)
-const abuelo = articulo.parentElement.parentElement;
-console.log(abuelo);
+// Eliminar un elemento
+const primerH2 = document.querySelector("h2");
+primerH2.remove();
