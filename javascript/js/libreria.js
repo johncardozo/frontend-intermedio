@@ -3,6 +3,15 @@ const handlerCheckboxClick = (evento) => {
   evento.target.nextElementSibling.classList.toggle("terminada");
 };
 
+function handlerSpanBorrarClick(evento) {
+  // Obtiene el elemento al que se el hizo click
+  const spanBorrar = evento.target;
+  //Obtiene el elemento <li> padre
+  const padre = spanBorrar.parentElement;
+  // Elimina el <li> padre
+  padre.remove();
+}
+
 const crearLi = (tarea) => {
   // Crea el <li>
   const li = document.createElement("li");
@@ -16,6 +25,7 @@ const crearLi = (tarea) => {
   // Crea el <span> para eliminar la tarea
   const spanBorrar = document.createElement("span");
   spanBorrar.textContent = "x";
+  spanBorrar.addEventListener("click", handlerSpanBorrarClick);
   // Agrega los elementos al <li>
   li.append(checkbox, spanTexto, spanBorrar);
   // Retorna el <li>
