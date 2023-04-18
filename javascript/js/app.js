@@ -12,6 +12,12 @@ const agregarTarea = (evento) => {
   // Obtiene el texto digitado por el usuario
   const tarea = inputTarea.value;
 
+  // Verifica que el usuario digite un texto
+  if (tarea === "") {
+    inputTarea.classList.add("error");
+    return;
+  }
+
   // Crea el <li>
   const li = crearLi(tarea);
 
@@ -20,6 +26,7 @@ const agregarTarea = (evento) => {
 
   // Limpia el input de la tarea
   inputTarea.value = "";
+  inputTarea.classList.remove("error");
 };
 // Agrega el listener cuando se
 // intente enviar información desde el formulario

@@ -1,0 +1,24 @@
+.error {
+  border: 1px solid red;
+  background-color: #f8d3d9;
+}
+
+ul#lista {
+  list-style-type: none;
+}
+
+ul#lista span:last-child {
+  color: white;
+  background-color: #c73636;
+  border-radius: 50%;
+  padding: 0px 5px;
+  text-align: center;
+  margin-left: 5px;
+  font-size: 0.7rem;
+  cursor: pointer;
+}
+
+.terminada {
+  text-decoration: line-through;
+  color: green;
+}
