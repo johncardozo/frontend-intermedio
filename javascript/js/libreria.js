@@ -1,3 +1,13 @@
+function mostrarCantidadTareas() {
+  const cantidadTareas = document.getElementById("cantidadTareas");
+  const lista = document.getElementById("lista");
+
+  // Obtiene la cantidad de hijos de la lista
+  const cantidad = lista.children.length;
+  // Modifica la cantidad de tareas
+  cantidadTareas.textContent = `Tenemos ${cantidad} tareas`;
+}
+
 const handlerCheckboxClick = (evento) => {
   // Agrega/elimina la clase del texto de la tarea
   evento.target.nextElementSibling.classList.toggle("terminada");
@@ -10,6 +20,8 @@ function handlerSpanBorrarClick(evento) {
   const padre = spanBorrar.parentElement;
   // Elimina el <li> padre
   padre.remove();
+  // Actualiza la cantidad de tareas
+  mostrarCantidadTareas();
 }
 
 const crearLi = (tarea) => {
@@ -32,4 +44,4 @@ const crearLi = (tarea) => {
   return li;
 };
 
-export { crearLi };
+export { crearLi, mostrarCantidadTareas };
