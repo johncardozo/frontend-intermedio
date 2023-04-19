@@ -14,7 +14,8 @@ try {
   console.log(b);
   console.log("Has ganado el premio");
 } catch (error) {
-  console.log("Hubo un error. Intenta más tarde");
+  console.error("Hubo un error. Intenta más tarde");
+  console.warn("Esto no es un error, es una advertencia");
 } finally {
   console.log("Se acabó el proceso!");
 }
