@@ -1,24 +1,46 @@
-const promesa = new Promise((resolve, reject) => {
-  // Parametro 1 -> función
-  // Parámetro 2 -> milisegundos
-  // setTimeout(() => reject(new Error("Oops")), 3000);
-  setTimeout(() => resolve("excelente"), 3000);
-});
+// "Backend"
+const peliculas = [
+  { id: 1, titulo: "Pulp Fiction" },
+  { id: 2, titulo: "Kill Bill" },
+  { id: 3, titulo: "Once upon a time in Hollywwod" },
+];
 
-console.log(promesa);
+const getPeliculas = () => {
+  setTimeout(() => {
+    peliculas.forEach((p) => console.log(p.titulo));
+  }, 3000);
+};
 
-// then es una función.
-promesa
-  .then((resultado) => {
-    console.log(resultado);
-    console.log(promesa);
-  })
+const crearPelicula = (pelicula) => {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      // Agrega la pelicula al arreglo
+      peliculas.push(pelicula);
+      let error = false;
+      if (error) {
+        reject("No se pudo agregar la pelicula");
+      } else {
+        resolve("La pelicula se agregó");
+      }
+    }, 2000);
+  });
+};
+const nuevaPelicula = {
+  id: 4,
+  titulo: "Inglorious Basterds",
+};
+
+console.time("ejecucion");
+
+// Utiliza la promesa
+crearPelicula(nuevaPelicula)
+  .then(getPeliculas)
   .catch((error) => {
     console.log(error);
-    console.log(promesa);
   })
   .finally(() => {
-    console.log("Esto se ejecuta al finalizar la promesa ");
+    console.log("finally");
+    console.timeEnd("ejecucion");
   });
 
-console.log("Terminamos!");
+console.log("Continua la ejecución");
