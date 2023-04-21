@@ -44,3 +44,7 @@ crearPelicula(nuevaPelicula)
   });
 
 console.log("Continua la ejecución");
+
+let u = 9;
+
+6 = u;
