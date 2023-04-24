@@ -1,4 +1,16 @@
 "use strict";
-console.log("app Typescript");
-let edad = 21;
+let edad = 60;
 console.log(edad);
+console.log(typeof edad);
+edad = 40;
+console.log(edad);
+let months;
+let firstName;
+let isAdult;
+let identificador;
+identificador = 3;
+identificador = "Catalina";
+let variable;
+variable = 3;
+variable = "Frontend";
+console.log(variable);
