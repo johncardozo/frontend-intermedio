@@ -29,3 +29,10 @@ variable = 3;
 variable = "Frontend";
 
 console.log(variable);
+
+// Tipo any
+let dato: any;
+
+dato = 10;
+dato = "Backend";
+dato = false;
