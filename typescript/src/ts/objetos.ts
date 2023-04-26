@@ -1,17 +1,30 @@
 // Definición de una clase
 class Training {
-  type: string;
-  distance: number;
-  date: string;
+  // public es el valor por default
+  public _type: string;
+  // readonly solo permite la lectura del valor de la propiedad
+  readonly _distance: number;
+  public _date: string;
+  // private solo se puede leer/escribir dentro de la clase
+  private _comments: string;
 
   constructor(
     type: string = "Training run",
     distance: number = 0,
     date: string = "today"
   ) {
-    this.type = type;
-    this.distance = distance;
-    this.date = date;
+    this._type = type;
+    this._distance = distance;
+    this._date = date;
+    this._comments = "abc";
+  }
+
+  public get comments() {
+    return this._comments;
+  }
+
+  public set comments(newComment) {
+    this._comments = newComment;
   }
 
   /**
@@ -19,7 +32,7 @@ class Training {
    * @returns A formatted training
    */
   format() {
-    return `On ${this.date} I did ${this.type} for ${this.distance} kms.`;
+    return `On ${this._date} I did ${this._type} for ${this._distance} kms -> ${this._comments}`;
   }
 }
 
@@ -30,6 +43,18 @@ const t3 = new Training("Long run", 10, "2023-04-22");
 const t4 = new Training("Long run", 10);
 const t5 = new Training("Intervals");
 const t6 = new Training();
+t6._date = "2024-01-01";
+
+console.log(t1);
+console.log(t1._distance);
+// setter
+t1.comments = "The race was wonderful";
+// getter
+console.log(t1.comments);
+
+// Genera un error porque la propiedad es de solo lectura
+// y no se puede modificar
+//t1.distance = 42;
 
 // Use de un método de un objeto
 console.log(t1.format());

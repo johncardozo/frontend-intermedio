@@ -1,12 +1,19 @@
 "use strict";
 class Training {
     constructor(type = "Training run", distance = 0, date = "today") {
-        this.type = type;
-        this.distance = distance;
-        this.date = date;
+        this._type = type;
+        this._distance = distance;
+        this._date = date;
+        this._comments = "abc";
+    }
+    get comments() {
+        return this._comments;
+    }
+    set comments(newComment) {
+        this._comments = newComment;
     }
     format() {
-        return `On ${this.date} I did ${this.type} for ${this.distance} kms.`;
+        return `On ${this._date} I did ${this._type} for ${this._distance} kms -> ${this._comments}`;
     }
 }
 const t1 = new Training("Long run", 21, "2023-04-20");
@@ -15,6 +22,11 @@ const t3 = new Training("Long run", 10, "2023-04-22");
 const t4 = new Training("Long run", 10);
 const t5 = new Training("Intervals");
 const t6 = new Training();
+t6._date = "2024-01-01";
+console.log(t1);
+console.log(t1._distance);
+t1.comments = "The race was wonderful";
+console.log(t1.comments);
 console.log(t1.format());
 let trainings = [];
 trainings.push(t1);
