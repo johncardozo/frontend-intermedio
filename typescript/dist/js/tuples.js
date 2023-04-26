@@ -1,0 +1,12 @@
+"use strict";
+let arreglo = ["Cata", 21, true];
+arreglo[0] = 20;
+arreglo[2] = "Mary";
+console.log(arreglo);
+let tuple1;
+let tuple2 = ["Emilio", 13];
+tuple1 = ["Valeria", 10, false];
+tuple1[1] = 100;
+tuple2[0] = "Luciana";
+console.log(tuple1);
+console.log(tuple2);
