@@ -4,7 +4,7 @@ class Training {
     public _type: string = "Training run",
     readonly _distance: number = 0,
     public _date: string = "today",
-    private _comments = ""
+    private _comments: string = ""
   ) {}
 
   public get comments() {
