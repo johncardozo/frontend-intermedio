@@ -1,23 +1,11 @@
 // Definición de una clase
 class Training {
-  // public es el valor por default
-  public _type: string;
-  // readonly solo permite la lectura del valor de la propiedad
-  readonly _distance: number;
-  public _date: string;
-  // private solo se puede leer/escribir dentro de la clase
-  private _comments: string;
-
   constructor(
-    type: string = "Training run",
-    distance: number = 0,
-    date: string = "today"
-  ) {
-    this._type = type;
-    this._distance = distance;
-    this._date = date;
-    this._comments = "abc";
-  }
+    public _type: string = "Training run",
+    readonly _distance: number = 0,
+    public _date: string = "today",
+    private _comments = ""
+  ) {}
 
   public get comments() {
     return this._comments;

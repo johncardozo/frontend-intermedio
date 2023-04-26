@@ -1,10 +1,10 @@
 "use strict";
 class Training {
-    constructor(type = "Training run", distance = 0, date = "today") {
-        this._type = type;
-        this._distance = distance;
-        this._date = date;
-        this._comments = "abc";
+    constructor(_type = "Training run", _distance = 0, _date = "today", _comments = "") {
+        this._type = _type;
+        this._distance = _distance;
+        this._date = _date;
+        this._comments = _comments;
     }
     get comments() {
         return this._comments;
