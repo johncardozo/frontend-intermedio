@@ -4,10 +4,6 @@ class Training {
   distance: number;
   date: string;
 
-  // type, distance, date
-  // type, distance
-  // type
-  // sin parámetros
   constructor(
     type: string = "Training run",
     distance: number = 0,
@@ -17,7 +13,16 @@ class Training {
     this.distance = distance;
     this.date = date;
   }
+
+  /**
+   * Formats the training for a better view.
+   * @returns A formatted training
+   */
+  format() {
+    return `On ${this.date} I did ${this.type} for ${this.distance} kms.`;
+  }
 }
+
 // Sobrecarga de constructores
 const t1 = new Training("Long run", 21, "2023-04-20");
 const t2 = new Training("Intervals", 8, "2023-04-21");
@@ -26,9 +31,20 @@ const t4 = new Training("Long run", 10);
 const t5 = new Training("Intervals");
 const t6 = new Training();
 
-console.log(t1);
-console.log(t2);
-console.log(t3);
-console.log(t4);
-console.log(t5);
-console.log(t6);
+// Use de un método de un objeto
+console.log(t1.format());
+
+// Declaración de arreglo de objetos
+let trainings: Training[] = [];
+
+// Agrega objetos al arreglo
+trainings.push(t1);
+trainings.push(t2);
+trainings.push(t3);
+trainings.push(t4);
+trainings.push(t5);
+trainings.push(t6);
+trainings.push(new Training("Long run", 42, "2023-04-26"));
+
+// Recorre el arreglo de objetos
+trainings.forEach((training) => console.log(training.format()));
