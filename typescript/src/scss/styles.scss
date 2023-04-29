@@ -1,7 +1,13 @@
-$bg: #316ae5;
-$font-color: #fff;
+fieldset {
+  border: 0;
+}
 
-body {
-  background-color: $bg;
-  color: $font-color;
+table {
+  width: 100%;
+  border: 1px solid black;
+  border-collapse: collapse;
+  td,
+  th {
+    border: 1px solid black;
+  }
 }
