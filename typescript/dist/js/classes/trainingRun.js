@@ -5,6 +5,6 @@ export class TrainingRun {
         this.type = "Training Run";
     }
     format() {
-        return `I ran ${this.distance}k on ${this.date}`;
+        return `TRAINING RUN: I ran ${this.distance}k on ${this.date}`;
     }
 }

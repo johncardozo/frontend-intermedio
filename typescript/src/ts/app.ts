@@ -1,3 +1,8 @@
+import { Intervals } from "./classes/intervals.js";
+import { LongRun } from "./classes/longRun.js";
+import { TrainingRun } from "./classes/trainingRun.js";
+import { ITraining } from "./interfaces/itraining.js";
+
 // Obtiene los elementos del formulario
 const form = document.querySelector("form")!;
 const inputDate = document.querySelector("#inputDate") as HTMLInputElement;
@@ -6,16 +11,34 @@ const inputDistance = document.querySelector(
   "#inputDistance"
 ) as HTMLInputElement;
 
+// Definición de constantes de tipo de entrenamiento
+const TRAINING_RUN = 1;
+const INTERVALS = 2;
+const LONG_RUN = 3;
+
+const trainings: ITraining[] = [];
+
 form.addEventListener("submit", (evento: SubmitEvent) => {
   // Evita enviar info al servidor
   evento.preventDefault();
 
   // Obtiene los datos del usuario
   const date = inputDate.value;
-  const type = selectType.value;
+  const type = parseInt(selectType.value);
   const distance = inputDistance.valueAsNumber;
 
-  console.log(date, typeof date);
-  console.log(type, typeof type);
-  console.log(distance, typeof distance);
+  let newTraining: ITraining;
+  switch (type) {
+    case TRAINING_RUN:
+      newTraining = new TrainingRun(date, distance);
+      break;
+    case INTERVALS:
+      newTraining = new Intervals(date, distance);
+      break;
+    case LONG_RUN:
+      newTraining = new LongRun(date, distance);
+      break;
+  }
+  // Agrega el nuevo entrenamiento a la lista
+  trainings.push(newTraining!);
 });

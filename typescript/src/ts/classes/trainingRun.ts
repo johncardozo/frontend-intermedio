@@ -7,6 +7,6 @@ export class TrainingRun implements ITraining {
   }
 
   format(): string {
-    return `I ran ${this.distance}k on ${this.date}`;
+    return `TRAINING RUN: I ran ${this.distance}k on ${this.date}`;
   }
 }
