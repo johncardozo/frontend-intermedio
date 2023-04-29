@@ -1,7 +1,7 @@
+import { ITraining } from "./interfaces/itraining.js";
 import { Intervals } from "./classes/intervals.js";
 import { LongRun } from "./classes/longRun.js";
 import { TrainingRun } from "./classes/trainingRun.js";
-import { ITraining } from "./interfaces/itraining.js";
 
 // Obtiene los elementos del formulario
 const form = document.querySelector("form")!;
@@ -10,6 +10,7 @@ const selectType = document.getElementById("selectType") as HTMLSelectElement;
 const inputDistance = document.querySelector(
   "#inputDistance"
 ) as HTMLInputElement;
+const tbody = document.querySelector("tbody") as HTMLTableSectionElement;
 
 // Definición de constantes de tipo de entrenamiento
 const TRAINING_RUN = 1;
@@ -41,4 +42,18 @@ form.addEventListener("submit", (evento: SubmitEvent) => {
   }
   // Agrega el nuevo entrenamiento a la lista
   trainings.push(newTraining!);
+
+  // Muestra los entrenamientos
+  showTrainings();
 });
+
+function showTrainings() {
+  // Limpia tbody
+  tbody.innerHTML = "";
+
+  // Recorre los entreanmientos
+  trainings.forEach((training) => {
+    const tr = training.getHTMLRow();
+    tbody.appendChild(tr);
+  });
+}

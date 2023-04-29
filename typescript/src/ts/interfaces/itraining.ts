@@ -3,4 +3,5 @@ export interface ITraining {
   type: string;
   distance: number;
   format(): string;
+  getHTMLRow(): HTMLTableRowElement;
 }

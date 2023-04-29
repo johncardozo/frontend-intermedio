@@ -5,6 +5,7 @@ const form = document.querySelector("form");
 const inputDate = document.querySelector("#inputDate");
 const selectType = document.getElementById("selectType");
 const inputDistance = document.querySelector("#inputDistance");
+const tbody = document.querySelector("tbody");
 const TRAINING_RUN = 1;
 const INTERVALS = 2;
 const LONG_RUN = 3;
@@ -27,4 +28,12 @@ form.addEventListener("submit", (evento) => {
             break;
     }
     trainings.push(newTraining);
+    showTrainings();
 });
+function showTrainings() {
+    tbody.innerHTML = "";
+    trainings.forEach((training) => {
+        const tr = training.getHTMLRow();
+        tbody.appendChild(tr);
+    });
+}
