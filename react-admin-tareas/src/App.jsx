@@ -1,14 +1,11 @@
 import Header from "./components/Header";
-import Opcion from "./components/Opcion";
+import Tareas from "./components/Tareas";
 
 function App() {
   return (
     <>
       <Header />
-      <Opcion texto="Home" link="/" />
-      <Opcion texto="Products" link="/products" />
-      <Opcion texto="Services" link="/services" />
-      <Opcion />
+      <Tareas />
     </>
   );
 }
