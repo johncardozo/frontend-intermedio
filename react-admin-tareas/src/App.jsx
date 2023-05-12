@@ -1,16 +1,7 @@
-function App() {
-  // Declaración de variables
-  const nombre = "Catalina";
-  const edad = 21;
+import Header from "./components/Header";
 
-  return (
-    <>
-      <h1>
-        La estudiante {nombre} tiene {edad} años
-      </h1>
-      <h2>{edad >= 18 ? "Adulto" : "Niño"}</h2>
-    </>
-  );
+function App() {
+  return <Header />;
 }
 
 export default App;
