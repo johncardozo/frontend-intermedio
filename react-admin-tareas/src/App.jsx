@@ -5,9 +5,10 @@ function App() {
   return (
     <>
       <Header />
-      <Opcion texto="Home" />
-      <Opcion texto="Products" />
-      <Opcion texto="Services" />
+      <Opcion texto="Home" link="/" />
+      <Opcion texto="Products" link="/products" />
+      <Opcion texto="Services" link="/services" />
+      <Opcion />
     </>
   );
 }
