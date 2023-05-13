@@ -15,7 +15,9 @@ const Tareas = () => {
       )}
       <ul>
         {listaTareas.map((tarea) => (
-          <li key={tarea.id}>{tarea.titulo}</li>
+          <li className="tarea" key={tarea.id}>
+            {tarea.titulo}
+          </li>
         ))}
       </ul>
     </>
