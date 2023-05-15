@@ -1,0 +1,8 @@
+@use "variables" as v;
+
+ul.countries {
+  li {
+    background-color: v.$color-fondo;
+    color: v.$color-letra;
+  }
+}
