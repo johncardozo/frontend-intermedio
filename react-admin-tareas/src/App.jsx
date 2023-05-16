@@ -8,10 +8,11 @@ import "./styles/style.scss";
 
 function App() {
   // Estado del componente
-  const [tareas, setTareas] = useState([
-    { id: 10, titulo: "Running" },
-    { id: 20, titulo: "Programming" },
-    { id: 30, titulo: "Reading" },
+  // const [tareas, setTareas]
+  const [tareas] = useState([
+    { id: 1, titulo: "Running" },
+    { id: 2, titulo: "Programming" },
+    { id: 3, titulo: "Reading" },
   ]);
 
   return (
