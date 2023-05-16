@@ -1,9 +1,11 @@
 import PropTypes from "prop-types";
+import Boton from "./Boton";
 
 const Header = ({ titulo }) => {
   return (
     <header>
       <h2>{titulo}</h2>
+      <Boton />
     </header>
   );
 };
