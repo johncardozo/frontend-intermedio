@@ -1,10 +1,11 @@
-const Boton = () => {
-  const clickHandler = (event) => {
-    console.log("Me hicieron click");
-    console.log(event);
-  };
+import PropTypes from "prop-types";
 
-  return <button onClick={clickHandler}>click me</button>;
+const Boton = ({ onClickOnButton }) => {
+  return <button onClick={onClickOnButton}>click me</button>;
+};
+
+Boton.propTypes = {
+  onClickOnButton: PropTypes.func,
 };
 
 export default Boton;
