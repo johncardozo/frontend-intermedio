@@ -1,26 +1,10 @@
-import { useState } from "react";
+import PropTypes from "prop-types";
 
-const Tareas = () => {
-  // Estado del componente-> datos del componente
-  const [listaTareas, setListaTareas] = useState([
-    { id: 1, titulo: "Running" },
-    { id: 2, titulo: "Programming" },
-    { id: 3, titulo: "Reading" },
-  ]);
-
-  // Hook State
-  //  const [edad, setEdad] = useState(20);
-
-  // Estado es inmutable
-  //edad = 3;
-
-  // Modifica el estado a através de la función set
-  //setEdad(3);
-
+const Tareas = ({ tareas }) => {
   return (
     <>
       <ul>
-        {listaTareas.map((tarea) => (
+        {tareas.map((tarea) => (
           <li className="tarea" key={tarea.id}>
             {tarea.titulo}
           </li>
@@ -28,6 +12,11 @@ const Tareas = () => {
       </ul>
     </>
   );
+};
+
+// Definición de propiedades
+Tareas.propTypes = {
+  tareas: PropTypes.array,
 };
 
 export default Tareas;
