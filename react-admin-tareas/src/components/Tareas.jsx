@@ -1,13 +1,12 @@
 import PropTypes from "prop-types";
+import Tarea from "./Tarea";
 
 const Tareas = ({ tareas }) => {
   return (
     <>
       <ul>
         {tareas.map((tarea) => (
-          <li className="tarea" key={tarea.id}>
-            {tarea.titulo}
-          </li>
+          <Tarea key={tarea.id} tarea={tarea} />
         ))}
       </ul>
     </>
