@@ -7,18 +7,25 @@ import Tareas from "./components/Tareas";
 import "./styles/style.scss";
 
 function App() {
-  // Estado del componente
-  // const [tareas, setTareas]
-  const [tareas] = useState([
+  // Estado del componente: inmutable
+  const [tareas, setTareas] = useState([
     { id: 1, titulo: "Running" },
     { id: 2, titulo: "Programming" },
     { id: 3, titulo: "Reading" },
   ]);
 
+  const eliminarTarea = (id) => {
+    // tareasActuales representa el estado actual
+    setTareas((tareasActuales) => {
+      // Filtra las tareas sin la tarea con el id recibido
+      return tareasActuales.filter((tarea) => tarea.id !== id);
+    });
+  };
+
   return (
     <>
       <Header titulo="Administrador de Tareas" />
-      <Tareas tareas={tareas} />
+      <Tareas tareas={tareas} onDelete={eliminarTarea} />
     </>
   );
 }
