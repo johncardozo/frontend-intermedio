@@ -3,12 +3,9 @@ import { FaTrashAlt } from "react-icons/fa";
 
 const Tarea = ({ tarea, onDelete }) => {
   return (
-    <li className="tarea">
+    <li>
       {tarea.titulo}
-      <FaTrashAlt
-        style={{ color: "#ff0000", fontSize: "0.8rem" }}
-        onClick={() => onDelete(tarea.id)}
-      />
+      <FaTrashAlt className="icono" onClick={() => onDelete(tarea.id)} />
     </li>
   );
 };

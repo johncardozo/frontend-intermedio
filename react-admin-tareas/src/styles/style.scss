@@ -7,5 +7,15 @@ ul.tareas {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    .icono {
+      color: #cf00b3;
+      font-size: 0.8rem;
+      cursor: pointer;
+
+      &:hover {
+        color: #ff0cdf;
+      }
+    }
   }
 }
