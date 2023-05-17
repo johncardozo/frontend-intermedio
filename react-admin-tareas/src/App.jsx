@@ -9,9 +9,9 @@ import "./styles/style.scss";
 function App() {
   // Estado del componente: inmutable
   const [tareas, setTareas] = useState([
-    { id: 1, titulo: "Running" },
-    { id: 2, titulo: "Programming" },
-    { id: 3, titulo: "Reading" },
+    { id: 1, titulo: "Running", terminada: true },
+    { id: 2, titulo: "Programming", terminada: true },
+    { id: 3, titulo: "Reading", terminada: false },
   ]);
 
   const eliminarTarea = (id) => {

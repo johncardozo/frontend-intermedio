@@ -3,7 +3,7 @@ import { FaTrashAlt } from "react-icons/fa";
 
 const Tarea = ({ tarea, onDelete }) => {
   return (
-    <li>
+    <li className={tarea.terminada ? "terminada" : ""}>
       {tarea.titulo}
       <FaTrashAlt className="icono" onClick={() => onDelete(tarea.id)} />
     </li>
