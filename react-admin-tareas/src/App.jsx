@@ -9,11 +9,11 @@ import "./styles/style.scss";
 
 function App() {
   // Estado del componente: inmutable
-  const [tareas, setTareas] = useState([
-    { id: 1, titulo: "Running", terminada: false },
-    { id: 2, titulo: "Programming", terminada: true },
-    { id: 3, titulo: "Reading", terminada: false },
-  ]);
+  const [tareas, setTareas] = useState([]);
+
+  const agregarTarea = (tarea) => {
+    setTareas([...tareas, tarea]);
+  };
 
   const toggleTerminada = (id) => {
     // tareasActuales representa el estado actual
@@ -37,7 +37,7 @@ function App() {
   return (
     <>
       <Header titulo="Administrador de Tareas" />
-      <AgregarTareaForm />
+      <AgregarTareaForm onAddTask={agregarTarea} />
       <Tareas
         tareas={tareas}
         onDelete={eliminarTarea}

@@ -4,7 +4,7 @@ import { FaTrashAlt } from "react-icons/fa";
 const Tarea = ({ tarea, onDelete, onToggle }) => {
   return (
     <li
-      className={tarea.terminada && "terminada"}
+      className={tarea.terminada ? "terminada" : ""}
       onDoubleClick={() => onToggle(tarea.id)}
     >
       {tarea.titulo}
