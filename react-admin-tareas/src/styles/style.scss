@@ -24,3 +24,13 @@ ul.tareas {
     text-decoration: line-through;
   }
 }
+
+form {
+  fieldset {
+    border: none;
+    input[type="submit"] {
+      cursor: pointer;
+      margin-right: 10px;
+    }
+  }
+}

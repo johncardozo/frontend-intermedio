@@ -3,6 +3,7 @@ import { useState } from "react";
 // Componentes propios
 import Header from "./components/Header";
 import Tareas from "./components/Tareas";
+import AgregarTareaForm from "./components/AgregarTareaForm";
 // Importar SCSS
 import "./styles/style.scss";
 
@@ -36,6 +37,7 @@ function App() {
   return (
     <>
       <Header titulo="Administrador de Tareas" />
+      <AgregarTareaForm />
       <Tareas
         tareas={tareas}
         onDelete={eliminarTarea}
