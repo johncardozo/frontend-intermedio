@@ -7,6 +7,7 @@ ul.tareas {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    cursor: pointer;
 
     .icono {
       color: #cf00b3;
@@ -20,5 +21,6 @@ ul.tareas {
   }
   .terminada {
     background: #13752a;
+    text-decoration: line-through;
   }
 }
