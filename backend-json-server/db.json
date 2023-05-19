@@ -1,0 +1,24 @@
+{
+  "tareas": [
+    {
+      "id": 1,
+      "titulo": "Running",
+      "terminada": true
+    },
+    {
+      "id": 2,
+      "titulo": "Programming",
+      "terminada": true
+    },
+    {
+      "titulo": "Watch The Mandalorian",
+      "terminada": false,
+      "id": 4
+    },
+    {
+      "titulo": "Read the book",
+      "terminada": true,
+      "id": 5
+    }
+  ]
+}

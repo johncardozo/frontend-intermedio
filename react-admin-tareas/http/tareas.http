@@ -1,0 +1,26 @@
+### Obtener todas las tareas
+GET http://localhost:3000/tareas/
+
+### Obtener una tarea
+GET http://localhost:3000/tareas/3
+
+### Crear tarea
+POST http://localhost:3000/tareas/
+content-type: application/json
+
+{
+    "titulo": "Read the book",
+    "terminada": true
+}
+
+### Modificar tarea
+PATCH http://localhost:3000/tareas/3
+content-type: application/json
+
+{
+    "titulo": "Ir a nadar",
+    "terminada": true
+}
+
+### Eliminar una tarea
+DELETE http://localhost:3000/tareas/3
