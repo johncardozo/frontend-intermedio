@@ -1,5 +1,7 @@
 // Librerías de React
-import { useState } from "react";
+import { useEffect, useState } from "react";
+// Libreíras externas
+import axios from "axios";
 // Componentes propios
 import Header from "./components/Header";
 import Tareas from "./components/Tareas";
@@ -10,6 +12,23 @@ import "./styles/style.scss";
 function App() {
   // Estado del componente: inmutable
   const [tareas, setTareas] = useState([]);
+
+  // Hook que ejecuta código al crear componente
+  useEffect(() => {
+    const obtenerTareas = async () => {
+      try {
+        const respuesta = await axios.get("http://localhost:3000/tareas/");
+        if (respuesta.status === 200) {
+          setTareas(respuesta.data);
+        }
+      } catch (error) {
+        console.error("Hubo error al obtener las tareas");
+      }
+    };
+
+    // Obtiene las tareas del backend
+    obtenerTareas();
+  }, []);
 
   const agregarTarea = (tarea) => {
     setTareas([...tareas, tarea]);
