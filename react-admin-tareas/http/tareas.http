@@ -9,8 +9,8 @@ POST http://localhost:3000/tareas/
 content-type: application/json
 
 {
-    "titulo": "Read the book",
-    "terminada": true
+    "titulo": "Take a picture",
+    "terminada": false
 }
 
 ### Modificar tarea

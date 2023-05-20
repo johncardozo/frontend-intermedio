@@ -19,6 +19,21 @@
       "titulo": "Read the book",
       "terminada": true,
       "id": 5
+    },
+    {
+      "titulo": "Take a picture",
+      "terminada": false,
+      "id": 6
+    },
+    {
+      "titulo": "Cook the dinner",
+      "terminada": false,
+      "id": 7
+    },
+    {
+      "titulo": "Learn React",
+      "terminada": false,
+      "id": 8
     }
   ]
 }
