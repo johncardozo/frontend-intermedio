@@ -11,11 +11,6 @@
       "terminada": true
     },
     {
-      "titulo": "Watch The Mandalorian",
-      "terminada": false,
-      "id": 4
-    },
-    {
       "titulo": "Read the book",
       "terminada": true,
       "id": 5
@@ -26,19 +21,9 @@
       "id": 6
     },
     {
-      "titulo": "Cook the dinner",
-      "terminada": false,
-      "id": 7
-    },
-    {
       "titulo": "Learn React",
       "terminada": false,
       "id": 8
-    },
-    {
-      "titulo": "Plant a tree",
-      "terminada": false,
-      "id": 9
     }
   ]
 }

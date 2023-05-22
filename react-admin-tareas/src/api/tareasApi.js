@@ -29,9 +29,29 @@ const agregarTareaAPI = async (tarea) => {
       return respuesta.data;
     }
   } catch (error) {
-    console.error("Hubo error al crear la tareas");
+    console.error("Hubo error al crear la tarea");
     return null;
   }
 };
 
-export { obtenerTareasAPI, agregarTareaAPI };
+/**
+ * Elimina una tarea del backend
+ * @param {*} id Identificador de la tarea
+ * @returns Un objeto vacío si la eliminación fue exitosa y null de lo contrario
+ */
+const eliminarTareaAPI = async (id) => {
+  try {
+    const respuesta = await axios.delete(
+      `${import.meta.env.VITE_BACKEND_URL}${id}`
+    );
+    if (respuesta.status === 200) {
+      return respuesta.data;
+    }
+    return null;
+  } catch (error) {
+    console.error("Hubo un error al eliminar la tarea");
+    return null;
+  }
+};
+
+export { obtenerTareasAPI, agregarTareaAPI, eliminarTareaAPI };

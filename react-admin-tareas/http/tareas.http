@@ -23,4 +23,4 @@ content-type: application/json
 }
 
 ### Eliminar una tarea
-DELETE http://localhost:3000/tareas/3
+DELETE http://localhost:3000/tareas/100

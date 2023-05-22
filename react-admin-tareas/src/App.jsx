@@ -7,7 +7,11 @@ import Tareas from "./components/Tareas";
 import Error from "./components/Error";
 import AgregarTareaForm from "./components/AgregarTareaForm";
 
-import { obtenerTareasAPI, agregarTareaAPI } from "./api/tareasApi";
+import {
+  obtenerTareasAPI,
+  agregarTareaAPI,
+  eliminarTareaAPI,
+} from "./api/tareasApi";
 
 // Importar SCSS
 import "./styles/style.scss";
@@ -35,7 +39,9 @@ function App() {
   }, []);
 
   const agregarTarea = async (tarea) => {
+    // Agrega la tarea en Backend
     const nuevaTarea = await agregarTareaAPI(tarea);
+    // Agrega la tarea en el State
     setTareas([...tareas, nuevaTarea]);
   };
 
@@ -50,12 +56,17 @@ function App() {
     });
   };
 
-  const eliminarTarea = (id) => {
-    // tareasActuales representa el estado actual
-    setTareas((tareasActuales) => {
-      // Filtra las tareas sin la tarea con el id recibido
-      return tareasActuales.filter((tarea) => tarea.id !== id);
-    });
+  const eliminarTarea = async (id) => {
+    // Elimina la tarea del backend
+    const respuesta = await eliminarTareaAPI(id);
+    // Verifica que la eliminación de la tarea haya sido exitosa
+    if (respuesta) {
+      // tareasActuales representa el estado actual
+      setTareas((tareasActuales) => {
+        // Filtra las tareas sin la tarea con el id recibido
+        return tareasActuales.filter((tarea) => tarea.id !== id);
+      });
+    }
   };
 
   return (
