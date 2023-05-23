@@ -16,7 +16,7 @@ import {
 // Importar SCSS
 import "./styles/style.scss";
 
-function App() {
+const App = () => {
   // Estado del componente: inmutable
   const [tareas, setTareas] = useState([]);
   const [error, setError] = useState(false);
@@ -24,6 +24,7 @@ function App() {
   // Hook que ejecuta código al crear componente
   useEffect(() => {
     const obtenerTareas = async () => {
+      // Obtiene las tareas del backend
       const tareas = await obtenerTareasAPI();
       if (tareas) {
         setTareas(tareas);
@@ -46,6 +47,8 @@ function App() {
   };
 
   const toggleTerminada = (id) => {
+    // TODO: actualizar la tarea en el Backend
+
     // tareasActuales representa el estado actual
     setTareas((tareasActuales) => {
       // Recorre las tareas actuales para retornar cada tarea
@@ -81,6 +84,6 @@ function App() {
       />
     </>
   );
-}
+};
 
 export default App;

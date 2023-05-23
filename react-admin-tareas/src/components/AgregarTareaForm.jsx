@@ -1,9 +1,23 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 
 const AgregarTareaForm = ({ onAddTask }) => {
   // Estado del formulario
   const [titulo, setTitulo] = useState("");
+  const [longitud, setLongitud] = useState(0);
+
+  useEffect(() => {
+    console.log("Acaba de ser renderizado!");
+  });
+
+  useEffect(() => {
+    console.log("Solo se ejecuta al montar el componente");
+  }, []);
+
+  useEffect(() => {
+    console.log("Se ejecuta cuando cambia la variable 'titulo'");
+    setLongitud(titulo.length);
+  }, [titulo]);
 
   const limpiarFormulario = (event) => {
     // Previene el envío del formulario
@@ -44,6 +58,7 @@ const AgregarTareaForm = ({ onAddTask }) => {
           value={titulo}
           onChange={(event) => setTitulo(event.target.value)}
         />
+        <p>Caracteres digitados: {longitud}</p>
       </fieldset>
       <fieldset>
         <input type="submit" value="Agregar" />
