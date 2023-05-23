@@ -1,34 +1,14 @@
 {
   "tareas": [
     {
-      "id": 1,
-      "titulo": "Running",
-      "terminada": true
-    },
-    {
       "id": 2,
       "titulo": "Programming",
-      "terminada": true
+      "terminada": false
     },
     {
       "titulo": "Read the book",
-      "terminada": true,
+      "terminada": false,
       "id": 5
-    },
-    {
-      "titulo": "Listening music",
-      "terminada": false,
-      "id": 9
-    },
-    {
-      "titulo": "Fix the engine",
-      "terminada": false,
-      "id": 10
-    },
-    {
-      "titulo": "Buy almond milk",
-      "terminada": false,
-      "id": 11
     }
   ]
 }

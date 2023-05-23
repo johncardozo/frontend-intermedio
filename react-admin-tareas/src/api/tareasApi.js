@@ -54,4 +54,21 @@ const eliminarTareaAPI = async (id) => {
   }
 };
 
-export { obtenerTareasAPI, agregarTareaAPI, eliminarTareaAPI };
+/**
+ * modifica una tarea del backend
+ * @param {*} tarea.id  tarea  con id a modificar
+ * @returns cambio de estado exitoso
+ */
+const toggleTerminadaAPI = async (tarea) => {
+  try {
+    const respuesta = await axios.patch(`${import.meta.env.VITE_BACKEND_URL}${tarea.id}`,tarea);    
+      if (respuesta.status === 200) {
+      return respuesta.data;
+    }
+  } catch (error) {
+    console.error("Hubo error al modificar la tarea");
+    return null;
+  }
+};
+
+export { obtenerTareasAPI, agregarTareaAPI, eliminarTareaAPI,toggleTerminadaAPI };

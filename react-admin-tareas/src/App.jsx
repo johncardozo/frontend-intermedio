@@ -11,6 +11,7 @@ import {
   obtenerTareasAPI,
   agregarTareaAPI,
   eliminarTareaAPI,
+  toggleTerminadaAPI,
 } from "./api/tareasApi";
 
 // Importar SCSS
@@ -46,7 +47,7 @@ const App = () => {
     setTareas([...tareas, nuevaTarea]);
   };
 
-  const toggleTerminada = (id) => {
+/*   const toggleTerminada = (id) => {
     // TODO: actualizar la tarea en el Backend
 
     // tareasActuales representa el estado actual
@@ -57,7 +58,7 @@ const App = () => {
         tarea.id === id ? { ...tarea, terminada: !tarea.terminada } : tarea
       );
     });
-  };
+  }; */
 
   const eliminarTarea = async (id) => {
     // Elimina la tarea del backend
@@ -69,6 +70,24 @@ const App = () => {
         // Filtra las tareas sin la tarea con el id recibido
         return tareasActuales.filter((tarea) => tarea.id !== id);
       });
+    }
+  };
+  const toggleTerminada = async (id) => {
+    // Obtiene la tarea actual
+    const tareaActual = tareas.find((tarea) => tarea.id === id);
+    if (tareaActual) {
+      // Invierte el valor de la propiedad 'terminada'
+      const tareaModificada = { ...tareaActual, terminada: !tareaActual.terminada };
+      // Actualiza la tarea en el backend
+      const tareaActualizada = await toggleTerminadaAPI(tareaModificada);
+      if (tareaActualizada) {
+        // Actualiza la tarea en el estado
+        setTareas((tareasActuales) =>
+          tareasActuales.map((tarea) =>
+            tarea.id === tareaActualizada.id ? tareaActualizada : tarea
+          )
+        );
+      }
     }
   };
 
