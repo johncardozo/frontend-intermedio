@@ -6,6 +6,7 @@ import Header from "./components/Header";
 import Tareas from "./components/Tareas";
 import Error from "./components/Error";
 import AgregarTareaForm from "./components/AgregarTareaForm";
+import SelectLanguage from "./components/SelectLanguage";
 
 // Contextos
 import LocalizationContext from "./context/LocalizationContext";
@@ -41,6 +42,7 @@ const App = () => {
   // Estado del componente: inmutable
   const [tareas, setTareas] = useState([]);
   const [error, setError] = useState(false);
+  const [language, setLanguage] = useState(local.es);
 
   // Hook que ejecuta código al crear componente
   useEffect(() => {
@@ -93,9 +95,19 @@ const App = () => {
     }
   };
 
+  const handlerLanguageChange = (language) => {
+    if (language === "es") {
+      setLanguage(local.es);
+    }
+    if (language === "en") {
+      setLanguage(local.en);
+    }
+  };
+
   return (
     <>
-      <LocalizationContext.Provider value={local.en}>
+      <LocalizationContext.Provider value={language}>
+        <SelectLanguage onLanguageChange={handlerLanguageChange} />
         <Header />
         <AgregarTareaForm onAddTask={agregarTarea} />
         {error && <Error mensaje="Hubo un error obteniendo las tareas" />}

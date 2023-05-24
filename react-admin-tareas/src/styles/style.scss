@@ -43,3 +43,13 @@ form {
   padding: 5px 10px;
   border-radius: 7px;
 }
+
+.languages {
+  display: flex;
+  gap: 10px;
+  margin-left: 20px;
+  span {
+    cursor: pointer;
+    font-size: 1.5rem;
+  }
+}
