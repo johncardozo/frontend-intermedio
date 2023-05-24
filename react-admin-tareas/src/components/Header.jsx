@@ -3,11 +3,11 @@ import LocalizationContext from "../context/LocalizationContext";
 
 const Header = () => {
   // Accede al context
-  const local = useContext(LocalizationContext);
+  const { language } = useContext(LocalizationContext);
 
   return (
     <header>
-      <h2>{local.header}</h2>
+      <h2>{language.header}</h2>
     </header>
   );
 };

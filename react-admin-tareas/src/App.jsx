@@ -10,6 +10,7 @@ import SelectLanguage from "./components/SelectLanguage";
 
 // Contextos
 import LocalizationContext from "./context/LocalizationContext";
+import local from "./context/ContextData";
 
 // Funciones de API
 import {
@@ -20,23 +21,6 @@ import {
 
 // Importar SCSS
 import "./styles/style.scss";
-
-const local = {
-  es: {
-    header: "Administrador de Tareas",
-    title: "Título",
-    add: "Agregar",
-    reset: "Limpiar",
-    characters: "Caracteres",
-  },
-  en: {
-    header: "Task manager",
-    title: "Title",
-    add: "Add",
-    reset: "Reset",
-    characters: "Characters",
-  },
-};
 
 const App = () => {
   // Estado del componente: inmutable
@@ -95,19 +79,10 @@ const App = () => {
     }
   };
 
-  const handlerLanguageChange = (language) => {
-    if (language === "es") {
-      setLanguage(local.es);
-    }
-    if (language === "en") {
-      setLanguage(local.en);
-    }
-  };
-
   return (
     <>
-      <LocalizationContext.Provider value={language}>
-        <SelectLanguage onLanguageChange={handlerLanguageChange} />
+      <LocalizationContext.Provider value={{ language, setLanguage }}>
+        <SelectLanguage />
         <Header />
         <AgregarTareaForm onAddTask={agregarTarea} />
         {error && <Error mensaje="Hubo un error obteniendo las tareas" />}
