@@ -7,6 +7,10 @@ import Tareas from "./components/Tareas";
 import Error from "./components/Error";
 import AgregarTareaForm from "./components/AgregarTareaForm";
 
+// Contextos
+import LocalizationContext from "./context/LocalizationContext";
+
+// Funciones de API
 import {
   obtenerTareasAPI,
   agregarTareaAPI,
@@ -15,6 +19,23 @@ import {
 
 // Importar SCSS
 import "./styles/style.scss";
+
+const local = {
+  es: {
+    header: "Administrador de Tareas",
+    title: "Título",
+    add: "Agregar",
+    reset: "Limpiar",
+    characters: "Caracteres",
+  },
+  en: {
+    header: "Task manager",
+    title: "Title",
+    add: "Add",
+    reset: "Reset",
+    characters: "Characters",
+  },
+};
 
 const App = () => {
   // Estado del componente: inmutable
@@ -74,14 +95,16 @@ const App = () => {
 
   return (
     <>
-      <Header titulo="Administrador de Tareas" />
-      <AgregarTareaForm onAddTask={agregarTarea} />
-      {error && <Error mensaje="Hubo un error obteniendo las tareas" />}
-      <Tareas
-        tareas={tareas}
-        onDelete={eliminarTarea}
-        onToggle={toggleTerminada}
-      />
+      <LocalizationContext.Provider value={local.es}>
+        <Header titulo="Administrador de Tareas" />
+        <AgregarTareaForm onAddTask={agregarTarea} />
+        {error && <Error mensaje="Hubo un error obteniendo las tareas" />}
+        <Tareas
+          tareas={tareas}
+          onDelete={eliminarTarea}
+          onToggle={toggleTerminada}
+        />
+      </LocalizationContext.Provider>
     </>
   );
 };
