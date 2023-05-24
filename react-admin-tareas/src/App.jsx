@@ -95,8 +95,8 @@ const App = () => {
 
   return (
     <>
-      <LocalizationContext.Provider value={local.es}>
-        <Header titulo="Administrador de Tareas" />
+      <LocalizationContext.Provider value={local.en}>
+        <Header />
         <AgregarTareaForm onAddTask={agregarTarea} />
         {error && <Error mensaje="Hubo un error obteniendo las tareas" />}
         <Tareas

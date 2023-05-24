@@ -12,8 +12,6 @@ const AgregarTareaForm = ({ onAddTask }) => {
   // Accede al context
   const local = useContext(LocalizationContext);
 
-  console.log(local);
-
   // Actualiza la cantidad de caracteres digitados
   useEffect(() => {
     setLongitud(titulo.length);

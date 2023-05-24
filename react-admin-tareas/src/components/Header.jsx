@@ -1,19 +1,15 @@
-import PropTypes from "prop-types";
+import { useContext } from "react";
+import LocalizationContext from "../context/LocalizationContext";
 
-const Header = ({ titulo }) => {
+const Header = () => {
+  // Accede al context
+  const local = useContext(LocalizationContext);
+
   return (
     <header>
-      <h2>{titulo}</h2>
+      <h2>{local.header}</h2>
     </header>
   );
-};
-
-Header.defaultProps = {
-  titulo: "Task Manager",
-};
-
-Header.propTypes = {
-  titulo: PropTypes.string,
 };
 
 export default Header;
