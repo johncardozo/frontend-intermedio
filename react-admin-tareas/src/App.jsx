@@ -1,5 +1,5 @@
 // Librerías de React
-import { useEffect, useState } from "react";
+import { useEffect, useState, useReducer } from "react";
 
 // Componentes propios
 import Header from "./components/Header";
@@ -7,6 +7,9 @@ import Tareas from "./components/Tareas";
 import Error from "./components/Error";
 import AgregarTareaForm from "./components/AgregarTareaForm";
 import SelectLanguage from "./components/SelectLanguage";
+
+// Reducers
+import tareasReducer from "./reducers/Tareasreducer";
 
 // Contextos
 import LocalizationContext from "./context/LocalizationContext";
@@ -23,8 +26,8 @@ import {
 import "./styles/style.scss";
 
 const App = () => {
-  // Estado del componente: inmutable
-  const [tareas, setTareas] = useState([]);
+  // Estado del componente
+  const [tareas, dispatch] = useReducer(tareasReducer, []);
   const [error, setError] = useState(false);
   const [language, setLanguage] = useState(local.es);
 
@@ -34,10 +37,12 @@ const App = () => {
       // Obtiene las tareas del backend
       const tareas = await obtenerTareasAPI();
       if (tareas) {
-        setTareas(tareas);
+        // Modifica el state
+        dispatch({ type: "CARGAR", tareas });
         setError(false);
       } else {
-        setTareas([]);
+        // Modifica el state
+        dispatch({ type: "CARGAR" });
         setError(true);
       }
     };
@@ -49,21 +54,15 @@ const App = () => {
   const agregarTarea = async (tarea) => {
     // Agrega la tarea en Backend
     const nuevaTarea = await agregarTareaAPI(tarea);
-    // Agrega la tarea en el State
-    setTareas([...tareas, nuevaTarea]);
+    // Agrega la tarea en el state
+    dispatch({ type: "AGREGAR", nuevaTarea });
   };
 
   const toggleTerminada = (id) => {
     // TODO: actualizar la tarea en el Backend
 
-    // tareasActuales representa el estado actual
-    setTareas((tareasActuales) => {
-      // Recorre las tareas actuales para retornar cada tarea
-      return tareasActuales.map((tarea) =>
-        // Verifica si la tarea tiene el mismo id
-        tarea.id === id ? { ...tarea, terminada: !tarea.terminada } : tarea
-      );
-    });
+    // Modifica el state
+    dispatch({ type: "MODIFICAR", id });
   };
 
   const eliminarTarea = async (id) => {
@@ -71,11 +70,8 @@ const App = () => {
     const respuesta = await eliminarTareaAPI(id);
     // Verifica que la eliminación de la tarea haya sido exitosa
     if (respuesta) {
-      // tareasActuales representa el estado actual
-      setTareas((tareasActuales) => {
-        // Filtra las tareas sin la tarea con el id recibido
-        return tareasActuales.filter((tarea) => tarea.id !== id);
-      });
+      // Modifica el state
+      dispatch({ type: "ELIMINAR", id });
     }
   };
 
