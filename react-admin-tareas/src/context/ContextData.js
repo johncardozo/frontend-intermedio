@@ -15,6 +15,14 @@ const local = {
     reset: "Reset",
     characters: "Characters",
   },
+  fr: {
+    idioma: "Français",
+    header: "Le Gestionnaire des tâches",
+    title: "Titre",
+    add: "Ajouter",
+    reset: "Réinitialiser",
+    characters: "Des lettres",
+  },
 };
 
 export default local;
