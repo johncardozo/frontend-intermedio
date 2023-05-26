@@ -9,6 +9,13 @@ ul.tareas {
     align-items: center;
     cursor: pointer;
 
+    .texto {
+      h3,
+      p {
+        margin: 0;
+      }
+    }
+
     .icono {
       color: #cf00b3;
       font-size: 0.8rem;

@@ -1,12 +1,17 @@
 import { useEffect, useState, useContext } from "react";
 import PropTypes from "prop-types";
 
+// Importar Custom Hook
+import useInput from "../hooks/useInput";
+
 // acceso al context
 import LocalizationContext from "../context/LocalizationContext";
 
 const AgregarTareaForm = ({ onAddTask }) => {
-  // Estado del formulario
-  const [titulo, setTitulo] = useState("");
+  // Estado del formulario con custom hook
+  const [titulo, bindTitulo, resetTitulo] = useInput("");
+  const [descripcion, bindDescripcion, resetDescripcion] = useInput("");
+  // Estado del formulario con useState
   const [longitud, setLongitud] = useState(0);
 
   // Accede al context
@@ -21,7 +26,8 @@ const AgregarTareaForm = ({ onAddTask }) => {
     // Previene el envío del formulario
     event.preventDefault();
     // Modifica el estado del componente
-    setTitulo("");
+    resetTitulo("");
+    resetDescripcion("");
   };
 
   const handleSubmit = (event) => {
@@ -36,6 +42,7 @@ const AgregarTareaForm = ({ onAddTask }) => {
     // Crea el nuevo objeto
     const nuevaTarea = {
       titulo,
+      descripcion,
       terminada: false,
     };
 
@@ -43,22 +50,22 @@ const AgregarTareaForm = ({ onAddTask }) => {
     onAddTask(nuevaTarea);
 
     // Modifica el estado del componente
-    setTitulo("");
+    resetTitulo("");
+    resetDescripcion("");
   };
 
   return (
     <form onSubmit={handleSubmit} autoComplete="off">
       <fieldset>
         <label htmlFor="titulo">{language.title}: </label>
-        <input
-          type="text"
-          id="titulo"
-          value={titulo}
-          onChange={(event) => setTitulo(event.target.value)}
-        />
+        <input type="text" id="titulo" {...bindTitulo} />
         <p>
           {language.characters}: {longitud}
         </p>
+      </fieldset>
+      <fieldset>
+        <label htmlFor="descripcion">{language.description}: </label>
+        <input type="text" id="descripcion" {...bindDescripcion} />
       </fieldset>
       <fieldset>
         <input type="submit" value={language.add} />

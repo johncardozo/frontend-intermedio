@@ -24,6 +24,18 @@
       "titulo": "Buy almond milk",
       "terminada": false,
       "id": 11
+    },
+    {
+      "titulo": "Learn Storybook",
+      "descripcion": "A hard thing to do",
+      "terminada": false,
+      "id": 12
+    },
+    {
+      "titulo": "Do the poll",
+      "descripcion": "write my thoughts in the poll",
+      "terminada": false,
+      "id": 13
     }
   ]
 }
