@@ -1,4 +1,5 @@
 import { useSelector } from "react-redux";
+import { GrCart } from "react-icons/gr";
 
 const CartIcon = () => {
   // Obtiene acceso al store
@@ -6,7 +7,8 @@ const CartIcon = () => {
 
   return (
     <div className="amount-container">
-      <h2>{amount}</h2>
+      <GrCart className="cart-icon" />
+      <span className="badge">{amount}</span>
     </div>
   );
 };

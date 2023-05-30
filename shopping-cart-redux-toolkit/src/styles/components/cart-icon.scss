@@ -1,0 +1,21 @@
+@use "../variables" as v;
+
+@mixin cart-icon() {
+  .amount-container {
+    .cart-icon {
+      font-size: 2rem;
+      path {
+        stroke: v.$header-color;
+      }
+    }
+    .badge {
+      background-color: v.$badge-bg-color;
+      color: v.$header-color;
+      border-radius: 10px;
+      padding: 0 5px;
+      font-size: 1rem;
+      vertical-align: top;
+      margin-left: -8px;
+    }
+  }
+}
