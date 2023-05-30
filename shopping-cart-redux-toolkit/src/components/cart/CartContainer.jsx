@@ -1,5 +1,6 @@
 import { useSelector } from "react-redux";
 import CartItem from "./CartItem";
+import CartFooter from "./CartFooter";
 
 const CartContainer = () => {
   // Obtiene acceso al store
@@ -13,6 +14,7 @@ const CartContainer = () => {
           return <CartItem key={item.id} {...item} />;
         })}
       </div>
+      <CartFooter />
     </section>
   );
 };
