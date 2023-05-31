@@ -21,7 +21,15 @@ const cartSlice = createSlice({
       const itemId = action.payload;
       state.cartItems = state.cartItems.filter((item) => item.id !== itemId);
     },
+    increaseItemAmount: (state, action) => {
+      // Obtiene el id del articulo a incrementar
+      const itemId = action.payload;
+      // Busca el articulo en el carrito
+      const item = state.cartItems.find((item) => item.id === itemId);
+      // Incrementa la cantidad
+      item.amount++;
+    },
   },
 });
-export const { clearCart, removeItem } = cartSlice.actions;
+export const { clearCart, removeItem, increaseItemAmount } = cartSlice.actions;
 export default cartSlice.reducer;
