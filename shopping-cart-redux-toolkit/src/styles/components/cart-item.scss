@@ -1,0 +1,44 @@
+@use "../variables" as v;
+
+@mixin cart-item() {
+  .cart-item {
+    display: grid;
+    align-items: center;
+    grid-template-columns: auto 1fr auto;
+    grid-column-gap: 1.5rem;
+    margin: 1.5rem 2rem;
+    img {
+      height: 6rem;
+    }
+    h4 {
+      margin-bottom: 0.5rem;
+      font-weight: 500;
+    }
+    .item-price {
+      color: v.$cart-price-color;
+    }
+    .remove-btn {
+      color: v.$cart-remove-item-btn-color;
+      border: none;
+      background: transparent;
+      cursor: pointer;
+      font-size: 0.8rem;
+      &:hover {
+        color: v.$cart-remove-item-btn-color-hover;
+      }
+    }
+    .amount-btn {
+      width: 30px;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      svg {
+        color: v.$cart-amount-btn-color;
+      }
+    }
+    .amount {
+      text-align: center;
+      font-size: 1.2rem;
+    }
+  }
+}

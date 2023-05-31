@@ -1,0 +1,28 @@
+@use "../variables" as v;
+
+@mixin cart-footer() {
+  .cart-footer {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    .cart-total {
+      h4 {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 1.5rem;
+        font-size: 1.5rem;
+      }
+    }
+    .btn-clear-cart {
+      background-color: v.$cart-clear-btn-bg;
+      color: v.$cart-clear-btn-color;
+      border: 1px solid v.$cart-clear-btn-color;
+      padding: 1rem;
+      font-size: 1.2rem;
+      text-transform: uppercase;
+      margin: 2rem 10rem;
+      cursor: pointer;
+      border-radius: 8px;
+    }
+  }
+}
