@@ -1,6 +1,7 @@
 @use "../variables" as v;
 @use "./cart-item" as ci;
 @use "./cart-footer" as cf;
+@use "./cart-empty" as ce;
 
 .cart-container {
   width: 100%;
@@ -12,6 +13,7 @@
     background-color: v.$cart-header-bg-color;
     color: v.$cart-header-text-color;
   }
+  @include ce.cart-empty();
   @include ci.cart-item();
   @include cf.cart-footer();
 }

@@ -1,0 +1,12 @@
+@use "../variables" as v;
+
+@mixin cart-empty() {
+  .cart-empty {
+    text-align: center;
+    padding: 1rem;
+    h3 {
+      color: v.$cart-empty-color;
+      font-weight: 400;
+    }
+  }
+}
