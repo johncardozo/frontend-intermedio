@@ -1,7 +1,11 @@
+// Componentes
 import NavBar from "./components/navbar/NavBar";
 import CartContainer from "./components/cart/CartContainer";
+import Modal from "./components/Modal";
+// Redux
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
+// Reducers
 import { calculateTotals } from "./features/cart/cartSlice";
 
 const App = () => {
@@ -16,6 +20,7 @@ const App = () => {
 
   return (
     <>
+      <Modal />
       <NavBar />
       <CartContainer />
     </>

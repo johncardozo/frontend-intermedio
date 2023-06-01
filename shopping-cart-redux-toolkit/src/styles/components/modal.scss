@@ -1,0 +1,46 @@
+@use "../variables" as v;
+
+.modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .modal {
+    background-color: v.$modal-bg;
+    width: 80vw;
+    max-width: 400px;
+    border-radius: 7px;
+    padding: 2rem 1rem;
+    text-align: center;
+    h4 {
+      font-weight: 400;
+    }
+    .btn-container {
+      margin-top: 1rem;
+      .btn {
+        text-transform: uppercase;
+        background: transparent;
+        padding: 0.8rem 1rem;
+        border-radius: 5px;
+        cursor: pointer;
+        margin: 0.5rem;
+      }
+      .btn-confirm {
+        background-color: v.$modal-btn-confirm-bg;
+        color: v.$modal-btn-confirm-text;
+        border: 1px solid v.$modal-btn-confirm-text;
+      }
+      .btn-cancel {
+        background-color: v.$modal-btn-cancel-bg;
+        color: v.$modal-btn-cancel-text;
+        border: 1px solid v.$modal-btn-cancel-text;
+      }
+    }
+  }
+}
