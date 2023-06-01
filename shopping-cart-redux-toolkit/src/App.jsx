@@ -11,6 +11,7 @@ import { calculateTotals } from "./features/cart/cartSlice";
 const App = () => {
   // Obtiene acceso a los items del cart
   const { cartItems } = useSelector((store) => store.cart);
+  const { isOpen } = useSelector((store) => store.modal);
   const dispatch = useDispatch();
 
   // Recalcula los totales cada vez que cambia cartItems
@@ -20,7 +21,7 @@ const App = () => {
 
   return (
     <>
-      <Modal />
+      {isOpen && <Modal />}
       <NavBar />
       <CartContainer />
     </>
