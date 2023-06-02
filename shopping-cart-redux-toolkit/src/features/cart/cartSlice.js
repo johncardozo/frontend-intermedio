@@ -1,12 +1,23 @@
-import { createSlice } from "@reduxjs/toolkit";
-import cartItems from "../../data/cartItems";
+import axios from "axios";
+import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 
 // Estado inicial
 const initialState = {
-  cartItems,
+  cartItems: [],
   amount: 0,
   total: 0,
+  isLoading: true,
 };
+
+const url = "http://localhost:3000/items";
+export const getCartItems = createAsyncThunk("cart/getCartItems", async () => {
+  try {
+    const response = await axios.get(url);
+    return response.data;
+  } catch (error) {
+    return [];
+  }
+});
 
 // Creación del slice
 const cartSlice = createSlice({
@@ -49,6 +60,27 @@ const cartSlice = createSlice({
       state.amount = totalAmount;
       state.total = totalPrice;
     },
+  },
+  extraReducers: (builder) => {
+    builder
+      .addCase(getCartItems.pending, (state) => {
+        // Indica que la información se está cargando
+        state.isLoading = true;
+        console.log("pending");
+      })
+      .addCase(getCartItems.fulfilled, (state, action) => {
+        console.log("fulfilled");
+        // Indica que la información ya no se está cargando
+        state.isLoading = false;
+        console.log(action);
+        // Obtiene los datos del backend
+        state.cartItems = action.payload;
+      })
+      .addCase(getCartItems.rejected, (state) => {
+        console.log("rejected");
+        // Indica que la información ya no se está cargando
+        state.isLoading = false;
+      });
   },
 });
 
