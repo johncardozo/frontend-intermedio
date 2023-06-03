@@ -2,9 +2,12 @@
 import NavBar from "./components/navbar/NavBar";
 import CartContainer from "./components/cart/CartContainer";
 import Modal from "./components/Modal";
+import Loading from "./components/Loading";
+
 // Redux
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
+
 // Reducers
 import { calculateTotals, getCartItems } from "./features/cart/cartSlice";
 
@@ -24,9 +27,7 @@ const App = () => {
     dispatch(calculateTotals());
   }, [cartItems, dispatch]);
 
-  if (isLoading) {
-    return <h1>Loading...</h1>;
-  }
+  if (isLoading) return <Loading />;
 
   return (
     <>
