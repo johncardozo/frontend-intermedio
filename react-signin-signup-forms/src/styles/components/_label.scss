@@ -1,0 +1,13 @@
+@use "../variables" as v;
+
+@mixin label() {
+  label {
+    font-family: v.$font-family;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.05rem;
+    color: v.$gray;
+    margin-top: 10px;
+  }
+}
