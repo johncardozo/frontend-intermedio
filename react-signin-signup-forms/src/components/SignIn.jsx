@@ -1,4 +1,8 @@
+import { useContext } from "react";
+import SignContext from "../context/SignContext";
+
 const SignIn = () => {
+  const { setStep } = useContext(SignContext);
   return (
     <main>
       <h3>Hello, friend!</h3>
@@ -15,11 +19,25 @@ const SignIn = () => {
             <p className="error">Password required</p>
           </fieldset>
           <button type="submit">Login</button>
-          <div className="forgot">Forgot password?</div>
+          <div
+            className="forgot"
+            onClick={() => {
+              setStep("forgot");
+            }}
+          >
+            Forgot password?
+          </div>
         </form>
       </div>
       <p>
-        Don&apos;t have an account? <span>Sign up!</span>
+        Don&apos;t have an account?{" "}
+        <span
+          onClick={() => {
+            setStep("signup");
+          }}
+        >
+          Sign up!
+        </span>
       </p>
     </main>
   );
