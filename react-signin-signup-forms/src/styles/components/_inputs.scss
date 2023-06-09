@@ -12,5 +12,16 @@
     outline: none;
     padding: 0.3rem 0.1rem;
     color: v.$black;
+
+    // Marca el elemento con error
+    &:invalid[data-focused="true"] {
+      border-bottom: 1px solid v.$error;
+      color: v.$error;
+    }
+
+    // Muestra el mensaje de error
+    &:invalid[data-focused="true"] ~ p {
+      display: block;
+    }
   }
 }
