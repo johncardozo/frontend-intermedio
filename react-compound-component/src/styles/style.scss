@@ -1,0 +1,30 @@
+$border: 1px solid #565656;
+$font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+  "Lucida Sans", Arial, sans-serif;
+
+.tab-container {
+  font-family: $font-family;
+  display: flex;
+  gap: 0.2rem;
+
+  .tab {
+    border: $border;
+    padding: 0.2rem 0.6rem;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+    background-color: #cecece;
+    span {
+      cursor: pointer;
+    }
+    &__active {
+      background-color: #8e8e8e;
+      color: #fff;
+    }
+  }
+}
+.tab-panel {
+  border: $border;
+  margin-top: -1px;
+  padding: 1rem;
+  font-family: $font-family;
+}
