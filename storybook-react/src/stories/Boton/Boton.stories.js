@@ -5,13 +5,15 @@ export default {
 };
 
 // Stories
-export const Basic = {
+export const Primary = {
   args: {
-    label: "Básico",
+    label: "Primary",
+    primary: true,
   },
 };
-export const Advanced = {
+export const Secondary = {
   args: {
-    label: "Avanzado",
+    label: "Secondary",
+    primary: false,
   },
 };

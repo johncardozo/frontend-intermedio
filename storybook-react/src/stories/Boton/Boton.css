@@ -1,0 +1,19 @@
+.btn {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  border: 0;
+  font-weight: 600;
+  padding: 0.8rem 1.5rem;
+  border-radius: 9999px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: #019cfd;
+}
+
+.btn-secondary {
+  background-color: #171c23;
+  border: 1px solid #fff;
+}
