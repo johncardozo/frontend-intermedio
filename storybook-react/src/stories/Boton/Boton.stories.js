@@ -4,4 +4,14 @@ export default {
   component: Boton,
 };
 
-export const Basic = {};
+// Stories
+export const Basic = {
+  args: {
+    label: "Básico",
+  },
+};
+export const Advanced = {
+  args: {
+    label: "Avanzado",
+  },
+};
