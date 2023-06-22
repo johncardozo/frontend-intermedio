@@ -17,3 +17,24 @@ export const Secondary = {
     primary: false,
   },
 };
+export const Large = {
+  args: {
+    label: "Grande",
+    primary: false,
+    size: "large",
+  },
+};
+export const Medium = {
+  args: {
+    label: "Mediano",
+    primary: false,
+    size: "medium",
+  },
+};
+export const Small = {
+  args: {
+    label: "Pequeñito",
+    primary: true,
+    size: "small",
+  },
+};
