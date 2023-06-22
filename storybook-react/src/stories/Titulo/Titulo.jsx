@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+import "./Titulo.css";
 
 const Titulo = ({ texto, nivel }) => {
   if (nivel === 1) return <h1>{texto}</h1>;
