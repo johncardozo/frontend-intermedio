@@ -19,7 +19,12 @@ function App() {
       </div>
       <h1>Vite + React</h1>
       <div className="card">
-        <Boton label="This is a button" primary={false} size="large" />
+        <Boton
+          label={`El contador es ${count}`}
+          primary={false}
+          size="large"
+          onClick={() => setCount((count) => count + 1)}
+        />
         <button onClick={() => setCount((count) => count + 1)}>
           El contador es {count}
         </button>
