@@ -1,0 +1,11 @@
+.toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #959595;
+}
+
+.toolbar-btns {
+  display: flex;
+  gap: 5px;
+}
