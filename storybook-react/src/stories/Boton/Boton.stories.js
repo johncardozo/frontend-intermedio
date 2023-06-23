@@ -2,7 +2,7 @@ import { Boton } from "./Boton";
 
 export default {
   component: Boton,
-  title: "Componentes/Boton",
+  title: "Atoms/Boton",
 };
 
 // Stories
