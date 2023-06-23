@@ -3,7 +3,8 @@ import "./Boton.css";
 
 /**
  * Este es el componente <strong>Botón  principal</strong> de la aplicación.<br>
- * Se debe utilizar teniendo en cuenta los <i>parámetros</i> descritos en la parte inferior.
+ * Se debe utilizar teniendo en cuenta los <i>parámetros</i> descritos en la parte inferior. <br>
+ * <span style="color: #019cfd; font-weight: bold;">Este texto está modificado con css</span>.
  */
 export const Boton = ({ label, primary, size, onClick }) => {
   const tipo = primary ? "btn-primary" : "btn-secondary";
