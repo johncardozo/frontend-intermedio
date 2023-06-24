@@ -1,0 +1,76 @@
+.pill {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-decoration: none;
+  padding: 0.3rem 1rem;
+  border-radius: 9999px;
+  border: 0;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.pill .icon {
+  font-size: 1rem;
+}
+.pill .label {
+  font-size: 1.1rem;
+}
+
+/* Mobile */
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  .pill {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    gap: 0;
+    justify-content: center;
+  }
+  .pill .icon {
+    font-size: 1.5rem;
+  }
+  .pill .label {
+    display: none;
+  }
+}
+/* Tablet */
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  .pill {
+    border-radius: 7px;
+    padding: 0.4rem 2rem;
+  }
+  .pill .icon {
+    font-size: 1.5rem;
+  }
+  .pill .label {
+    font-size: 0.9rem;
+  }
+}
+/* Laptops */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .pill {
+    padding: 0.5rem 2rem;
+    border-radius: 9999px;
+  }
+}
+/* Desktop */
+@media only screen and (min-width: 1025px) and (max-width: 1200px) {
+  .pill {
+    border-radius: 9999px;
+    flex-direction: column;
+    gap: 0;
+    padding-bottom: 1rem;
+  }
+  .pill .icon {
+    font-size: 2.5rem;
+    padding: 0;
+  }
+  .pill .label {
+    font-size: 0.8rem;
+    margin-top: -10px;
+  }
+}
+/* Extra & TV */
+@media only screen and (min-width: 1201px) {
+  .pill {
+    padding: 0.6rem 1.4rem;
+  }
+}
