@@ -1,0 +1,49 @@
+@use "../../../styles" as s;
+
+.balance {
+  background-image: linear-gradient(
+    to right bottom,
+    #2ea9e4,
+    #31a4f2,
+    #4e9cfc,
+    #7392ff,
+    #9984ff,
+    #c079f3,
+    #df6de3,
+    #f960ce,
+    #ff65b0,
+    #ff7297,
+    #ff8284,
+    #fb937a
+  );
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+    rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+  border-radius: 20px;
+  padding: 25px;
+  color: #fff;
+  font-family: s.$font-family;
+
+  &__header {
+    h4 {
+      font-weight: 200;
+      text-align: center;
+    }
+    h2 {
+      font-size: 2.2rem;
+      text-align: center;
+      font-weight: 500;
+    }
+  }
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    h4 {
+      font-weight: 300;
+      font-size: 0.9rem;
+    }
+    h3 {
+      font-weight: 600;
+      font-size: 1.3rem;
+    }
+  }
+}
