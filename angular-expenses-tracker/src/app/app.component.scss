@@ -1,3 +1,8 @@
-h1 {
-  color: green;
+.container {
+  background-color: #ececec;
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 150px auto;
+  padding: 20px;
 }
