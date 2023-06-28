@@ -1,5 +1,5 @@
-<h2>{{ title }}</h2>
-
-<p>{{ balance.amount }}</p>
-<p>{{ balance.income }}</p>
-<p>{{ balance.expenses }}</p>
+<div *ngIf="balance">
+  <p>Amount: {{ balance.amount }}</p>
+  <p>Income: {{ balance.income }}</p>
+  <p>Expenses: {{ balance.expenses }}</p>
+</div>
