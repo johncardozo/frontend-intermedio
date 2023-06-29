@@ -4,11 +4,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BalanceComponent } from './components/balance/balance.component';
+import { TransactionsComponent } from './components/transactions/transactions.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    BalanceComponent
+    BalanceComponent,
+    TransactionsComponent
   ],
   imports: [
     BrowserModule,
