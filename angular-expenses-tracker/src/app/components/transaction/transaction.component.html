@@ -12,11 +12,22 @@
     >
       ↓
     </div>
-    <h5 class="transaction__category">{{ transaction.category }}</h5>
-    <span class="material-symbols-outlined transaction__remove"> delete </span>
+    <h5 class="transaction__category">
+      {{ transaction.category }}
+      <span class="material-symbols-outlined transaction__remove">
+        delete
+      </span>
+    </h5>
   </div>
   <div>
-    <h5 class="transaction__amount">
+    <h5
+      class="transaction__amount"
+      [ngClass]="
+        transaction.type === 'expense'
+          ? 'transaction__amount-expense'
+          : 'transaction__amount-income'
+      "
+    >
       {{ transaction.amount | currency }}
     </h5>
     <h5 class="transaction__date">{{ transaction.date | date }}</h5>
