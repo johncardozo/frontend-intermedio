@@ -48,4 +48,13 @@
     color: #59b634;
     background-color: #defdc9;
   }
+  &__remove {
+    color: #ef6bce;
+    font-size: 0.9rem;
+    vertical-align: middle;
+    cursor: pointer;
+    &:hover {
+      color: #da19a9;
+    }
+  }
 }
