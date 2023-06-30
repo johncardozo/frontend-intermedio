@@ -10,6 +10,11 @@
   align-items: center;
   box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
 
+  &__title {
+    display: flex;
+    gap: 10px;
+  }
+
   &__category {
     color: #2d417d;
     font-size: 1rem;
@@ -28,5 +33,19 @@
     font-size: 0.7rem;
     font-weight: 400;
     text-align: right;
+  }
+  &__icon {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    text-align: center;
+  }
+  &__expense-icon {
+    color: #f761d1;
+    background-color: #ffe4f8;
+  }
+  &__income-icon {
+    color: #59b634;
+    background-color: #defdc9;
   }
 }

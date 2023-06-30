@@ -1,5 +1,17 @@
 <div class="transaction">
   <div class="transaction__title">
+    <div
+      *ngIf="transaction.type === 'income'"
+      class="transaction__icon transaction__income-icon"
+    >
+      ↑
+    </div>
+    <div
+      *ngIf="transaction.type === 'expense'"
+      class="transaction__icon transaction__expense-icon"
+    >
+      ↓
+    </div>
     <h5 class="transaction__category">{{ transaction.category }}</h5>
   </div>
   <div>
