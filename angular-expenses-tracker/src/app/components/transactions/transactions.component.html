@@ -2,5 +2,6 @@
   <app-transaction
     *ngFor="let transaction of transactions"
     [transaction]="transaction"
+    (removeTransactionEvent)="removeTransaction($event)"
   />
 </div>

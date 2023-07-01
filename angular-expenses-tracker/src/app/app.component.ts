@@ -15,24 +15,28 @@ export class AppComponent {
   };
   transactions: Transaction[] = [
     {
+      id: '1',
       type: 'expense',
       amount: 45,
       category: 'food',
       date: new Date(2023, 6, 26),
     },
     {
+      id: '2',
       type: 'expense',
       amount: 280,
       category: 'shopping',
       date: new Date(2023, 6, 24),
     },
     {
+      id: '3',
       type: 'expense',
       amount: 60,
       category: 'entertainment',
       date: new Date(2023, 6, 22),
     },
     {
+      id: '4',
       type: 'income',
       amount: 500,
       category: 'payroll',

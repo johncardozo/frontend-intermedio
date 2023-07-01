@@ -8,4 +8,8 @@ import { Transaction } from '../../models/transaction.model';
 })
 export class TransactionsComponent {
   @Input() transactions!: Transaction[];
+
+  removeTransaction(transactionId: string) {
+    console.log(`Eliminando la transacción ${transactionId}...`);
+  }
 }

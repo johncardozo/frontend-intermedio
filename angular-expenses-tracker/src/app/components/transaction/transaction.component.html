@@ -14,7 +14,10 @@
     </div>
     <h5 class="transaction__category">
       {{ transaction.category }}
-      <span class="material-symbols-outlined transaction__remove">
+      <span
+        class="material-symbols-outlined transaction__remove"
+        (click)="removeTransaction()"
+      >
         delete
       </span>
     </h5>
