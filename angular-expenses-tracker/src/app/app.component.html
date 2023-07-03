@@ -1,4 +1,7 @@
 <div class="container">
   <app-balance [balance]="balance" />
-  <app-transactions [transactions]="transactions" />
+  <app-transactions
+    [transactions]="transactions"
+    (removeTransactionEvent)="removeTransaction($event)"
+  />
 </div>

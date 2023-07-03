@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { Transaction } from '../../models/transaction.model';
 
 @Component({
@@ -8,8 +8,9 @@ import { Transaction } from '../../models/transaction.model';
 })
 export class TransactionsComponent {
   @Input() transactions!: Transaction[];
+  @Output() removeTransactionEvent = new EventEmitter<string>();
 
   removeTransaction(transactionId: string) {
-    console.log(`Eliminando la transacción ${transactionId}...`);
+    this.removeTransactionEvent.emit(transactionId);
   }
 }

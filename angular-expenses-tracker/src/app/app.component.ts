@@ -43,4 +43,10 @@ export class AppComponent {
       date: new Date(2023, 6, 20),
     },
   ];
+  removeTransaction(transactionId: string) {
+    // Revome a transaction given its id
+    this.transactions = this.transactions.filter(
+      (transaction) => transaction.id !== transactionId
+    );
+  }
 }
