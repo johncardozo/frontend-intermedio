@@ -1,6 +1,21 @@
+@use "../../../styles" as s;
+
 .transactions {
   display: flex;
   flex-direction: column;
   gap: 10px;
   margin-top: 20px;
+
+  &__empty-title {
+    font-family: s.$font-family;
+    color: #a382fd;
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-align: center;
+    padding: 25px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+      rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+  }
 }

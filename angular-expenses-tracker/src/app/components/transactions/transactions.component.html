@@ -1,7 +1,15 @@
 <div class="transactions">
-  <app-transaction
-    *ngFor="let transaction of transactions"
-    [transaction]="transaction"
-    (removeTransactionEvent)="removeTransaction($event)"
-  />
+  <div *ngIf="transactions.length > 0; then noEmpty; else empty"></div>
+
+  <ng-template #empty>
+    <h2 class="transactions__empty-title">No hay transacciones</h2>
+  </ng-template>
+
+  <ng-template #noEmpty>
+    <app-transaction
+      *ngFor="let transaction of transactions"
+      [transaction]="transaction"
+      (removeTransactionEvent)="removeTransaction($event)"
+    />
+  </ng-template>
 </div>
