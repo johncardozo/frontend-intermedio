@@ -18,4 +18,17 @@
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
       rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
   }
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px 15px 15px;
+    font-family: s.$font-family;
+    color: #595f8c;
+    a {
+      text-decoration: none;
+      font-size: 1.1rem;
+      color: #599afd;
+    }
+  }
 }

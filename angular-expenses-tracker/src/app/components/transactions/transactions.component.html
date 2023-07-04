@@ -6,6 +6,10 @@
   </ng-template>
 
   <ng-template #noEmpty>
+    <div class="transactions__header">
+      <h3>Transactions</h3>
+      <a href="add">add</a>
+    </div>
     <app-transaction
       *ngFor="let transaction of transactions"
       [transaction]="transaction"
