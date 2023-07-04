@@ -1,0 +1,7 @@
+<div class="main">
+  <app-balance [balance]="balance" />
+  <app-transactions
+    [transactions]="transactions"
+    (removeTransactionEvent)="removeTransaction($event)"
+  />
+</div>
