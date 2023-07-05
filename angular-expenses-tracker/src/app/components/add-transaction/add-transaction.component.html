@@ -1,20 +1,41 @@
 <div class="add-transaction">
   <h2>Add Transaction</h2>
-  <form class="add-transaction__form" autocomplete="off">
-    <input type="text" id="amount" class="add-transaction__amount" autofocus />
+  <form
+    class="add-transaction__form"
+    autocomplete="off"
+    [formGroup]="addTransactionForm"
+  >
+    <input
+      type="text"
+      class="add-transaction__amount"
+      autofocus
+      formControlName="amount"
+    />
     <div class="add-transaction__type">
-      <input type="radio" id="expense" name="type" value="expense" checked />
+      <input
+        type="radio"
+        id="expense"
+        name="type"
+        value="expense"
+        formControlName="type"
+      />
       <label for="expense">Expense</label>
-      <input type="radio" id="income" name="type" value="income" />
+      <input
+        type="radio"
+        id="income"
+        name="type"
+        value="income"
+        formControlName="type"
+      />
       <label for="income">Income</label>
     </div>
-    <select id="category">
+    <select formControlName="category">
       <option value="food">Food</option>
       <option value="utilities">Utilities</option>
       <option value="shopping">Shopping</option>
       <option value="payroll">Payroll</option>
     </select>
-    <input type="date" id="date" />
+    <input type="date" formControlName="date" />
     <button type="submit">Save</button>
   </form>
   <a routerLink="/">Cancel</a>
