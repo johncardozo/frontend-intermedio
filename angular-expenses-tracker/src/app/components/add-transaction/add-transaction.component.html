@@ -1,1 +1,21 @@
-<p>add-transaction works!</p>
+<div class="add-transaction">
+  <h2>Add Transaction</h2>
+  <form class="add-transaction__form" autocomplete="off">
+    <input type="text" id="amount" class="add-transaction__amount" autofocus />
+    <div class="add-transaction__type">
+      <input type="radio" id="expense" name="type" value="expense" checked />
+      <label for="expense">Expense</label>
+      <input type="radio" id="income" name="type" value="income" />
+      <label for="income">Income</label>
+    </div>
+    <select id="category">
+      <option value="food">Food</option>
+      <option value="utilities">Utilities</option>
+      <option value="shopping">Shopping</option>
+      <option value="payroll">Payroll</option>
+    </select>
+    <input type="date" id="date" />
+    <button type="submit">Save</button>
+  </form>
+  <a routerLink="/">Cancel</a>
+</div>

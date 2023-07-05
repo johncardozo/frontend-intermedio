@@ -1,0 +1,109 @@
+@use "../../../styles" as s;
+
+.add-transaction {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+  h2 {
+    font-family: s.$font-family;
+    text-align: center;
+    color: #30305e;
+    font-weight: 500;
+  }
+  &__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+    gap: 10px;
+  }
+  &__amount {
+    border-radius: 9999px;
+    border: none;
+    outline: none;
+    font-size: 3rem;
+    width: 20rem;
+    padding: 0.3rem 2rem;
+    font-family: s.$font-family;
+    font-weight: 300;
+    color: #3c3c9f;
+  }
+  &__type {
+    display: flex;
+    margin-top: 0.5rem;
+    label {
+      margin: 0 1.5rem 0 0.4rem;
+      font-family: s.$font-family;
+      font-size: 1.2rem;
+    }
+    input[type="radio"] {
+      // Reset appearance
+      appearance: none;
+      // Normal state
+      background-color: #fff;
+      width: 1.2rem;
+      height: 1.2rem;
+      border: 1px solid #68428c;
+      border-radius: 50%;
+      transform: translateY(0.2rem);
+      // Display check mark
+      display: grid;
+      place-content: center;
+      &::before {
+        content: "";
+        width: 0.8rem;
+        height: 0.8rem;
+        border-radius: 50%;
+        transform: scale(0);
+        box-shadow: inset 1rem 1rem #ba7af4;
+      }
+      &:checked::before {
+        transform: scale(1);
+      }
+    }
+  }
+  input[type="date"],
+  select {
+    font-family: s.$font-family;
+    font-size: 1.5rem;
+    font-weight: 200;
+    color: #3c3c9f;
+    padding: 1rem 1.5rem;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+  }
+  button {
+    border: none;
+    outline: none;
+    font-family: s.$font-family;
+    background-image: linear-gradient(
+      to right bottom,
+      #2ea9e4,
+      #31a4f2,
+      #4e9cfc,
+      #7392ff,
+      #9984ff,
+      #c079f3,
+      #df6de3,
+      #f960ce,
+      #ff65b0,
+      #ff7297,
+      #ff8284,
+      #fb937a
+    );
+    color: #fff;
+    font-size: 1.5rem;
+    padding: 1rem 1.7rem;
+    border-radius: 10px;
+    width: 15rem;
+    cursor: pointer;
+  }
+  a {
+    font-family: s.$font-family;
+    font-size: 1.1rem;
+    text-decoration: none;
+    color: #599afd;
+  }
+}
