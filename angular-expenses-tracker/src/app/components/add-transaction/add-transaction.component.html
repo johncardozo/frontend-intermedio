@@ -6,8 +6,7 @@
     [formGroup]="addTransactionForm"
     (ngSubmit)="onSubmit()"
   >
-    <!-- 
-    <div style="border: 1px solid red">
+    <!-- <div style="border: 1px solid red">
       <h1>{{ addTransactionForm.get("amount")?.errors | json }}</h1>
       <h1>{{ addTransactionForm.get("amount")?.invalid }}</h1>
       <h1>{{ addTransactionForm.get("amount")?.touched }}</h1>
@@ -26,7 +25,12 @@
         addTransactionForm.get('amount')?.touched
       "
     >
-      Amount is required
+      <span *ngIf="addTransactionForm.get('amount')?.errors?.['required']"
+        >Amount required</span
+      >
+      <span *ngIf="addTransactionForm.get('amount')?.errors?.['pattern']"
+        >Valid number required</span
+      >
     </div>
 
     <div class="add-transaction__type">
