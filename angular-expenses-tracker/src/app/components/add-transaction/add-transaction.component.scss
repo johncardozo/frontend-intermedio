@@ -106,4 +106,10 @@
     text-decoration: none;
     color: #599afd;
   }
+  &__error-message {
+    font-family: s.$font-family;
+    font-style: italic;
+    font-size: 0.9rem;
+    color: #e46adf;
+  }
 }
