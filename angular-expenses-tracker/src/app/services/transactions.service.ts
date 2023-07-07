@@ -7,12 +7,15 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class TransactionsService {
+  url: string = 'http://localhost:3000/transactions';
   // Servicio agregado con Dependency Injection
   constructor(private httpClient: HttpClient) {}
 
   public get(): Observable<Transaction[]> {
-    return this.httpClient.get<Transaction[]>(
-      'http://localhost:3000/transactions'
-    );
+    return this.httpClient.get<Transaction[]>(this.url);
+  }
+
+  public create(transaction: Transaction): Observable<Transaction> {
+    return this.httpClient.post<Transaction>(this.url, transaction);
   }
 }

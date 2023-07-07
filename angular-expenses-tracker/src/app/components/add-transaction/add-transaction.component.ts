@@ -1,6 +1,8 @@
 import { formatDate } from '@angular/common';
+import { ParseTreeResult } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { TransactionsService } from 'src/app/services/transactions.service';
 
 @Component({
   selector: 'app-add-transaction',
@@ -10,12 +12,14 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 export class AddTransactionComponent implements OnInit {
   addTransactionForm!: FormGroup;
 
+  constructor(private transactionsService: TransactionsService) {}
+
   // Hook que se ejecuta al montar el componente en el DOM
   ngOnInit(): void {
-    const date: string = formatDate(new Date(2022, 7, 30), 'yyyy-MM-dd', 'en');
+    const date: string = formatDate(new Date(), 'yyyy-MM-dd', 'en');
 
     this.addTransactionForm = new FormGroup({
-      amount: new FormControl(120, [
+      amount: new FormControl(0, [
         Validators.required,
         Validators.pattern('^[0-9]+$'),
       ]),
