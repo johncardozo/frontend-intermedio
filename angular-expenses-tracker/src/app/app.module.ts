@@ -1,7 +1,10 @@
+// Módulos de Angular
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
+// Componentes
 import { AboutComponent } from './components/about/about.component';
 import { AddTransactionComponent } from './components/add-transaction/add-transaction.component';
 import { AppComponent } from './app.component';
@@ -21,7 +24,12 @@ import { TransactionComponent } from './components/transaction/transaction.compo
     AddTransactionComponent,
     AboutComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

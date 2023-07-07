@@ -67,5 +67,42 @@
       "img": "https://fdn2.gsmarena.com/vv/bigpic/oneplus-11.jpg",
       "amount": 1
     }
+  ],
+  "transactions": [
+    {
+      "id": "1",
+      "type": "income",
+      "amount": 500,
+      "category": "payroll",
+      "date": "2023-06-20"
+    },
+    {
+      "id": "2",
+      "type": "expense",
+      "amount": 280,
+      "category": "shopping",
+      "date": "2023-06-21"
+    },
+    {
+      "id": "3",
+      "type": "expense",
+      "amount": 60,
+      "category": "entertainment",
+      "date": "2023-06-22"
+    },
+    {
+      "id": "4",
+      "type": "income",
+      "amount": 100,
+      "category": "payroll",
+      "date": "2023-06-23"
+    },
+    {
+      "id": "5",
+      "type": "expense",
+      "amount": 20,
+      "category": "food",
+      "date": "2023-06-24"
+    }
   ]
 }
