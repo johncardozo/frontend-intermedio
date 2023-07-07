@@ -103,6 +103,20 @@
       "amount": 20,
       "category": "food",
       "date": "2023-06-24"
+    },
+    {
+      "amount": 200,
+      "type": "income",
+      "category": "payroll",
+      "date": "2023-07-07",
+      "id": "jrtupEp"
+    },
+    {
+      "amount": 100,
+      "type": "expense",
+      "category": "utilities",
+      "date": "2023-07-06",
+      "id": "KZT3TSw"
     }
   ]
 }

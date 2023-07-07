@@ -1,7 +1,9 @@
 import { formatDate } from '@angular/common';
-import { ParseTreeResult } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+
+import { Transaction } from 'src/app/models/transaction.model';
 import { TransactionsService } from 'src/app/services/transactions.service';
 
 @Component({
@@ -12,7 +14,10 @@ import { TransactionsService } from 'src/app/services/transactions.service';
 export class AddTransactionComponent implements OnInit {
   addTransactionForm!: FormGroup;
 
-  constructor(private transactionsService: TransactionsService) {}
+  constructor(
+    private transactionsService: TransactionsService,
+    private router: Router
+  ) {}
 
   // Hook que se ejecuta al montar el componente en el DOM
   ngOnInit(): void {
@@ -32,9 +37,15 @@ export class AddTransactionComponent implements OnInit {
   onSubmit(): void {
     // Verifica si el formulario es válido
     if (this.addTransactionForm.valid) {
-      console.log(this.addTransactionForm);
-      console.log(this.addTransactionForm.value);
-      alert("Everything's ok");
+      // Obtiene el objeto Transaction del formulario
+      const newTransaction: Transaction = this.addTransactionForm.value;
+      // Usa el servicio para crear una transacción en el BE
+      this.transactionsService
+        .create(newTransaction)
+        .subscribe((response: Transaction) => {
+          // Redirecciona al Home
+          this.router.navigate(['']);
+        });
     } else {
       console.error('The form is not valid');
     }
