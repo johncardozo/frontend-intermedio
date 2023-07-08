@@ -10,9 +10,9 @@ import { TransactionsService } from '../../services/transactions.service';
 })
 export class HomeComponent implements OnInit {
   balance: Balance = {
-    amount: 100_000,
-    income: 150_000,
-    expenses: 50_000,
+    amount: 0,
+    income: 0,
+    expenses: 0,
   };
   transactions: Transaction[] = [];
 
@@ -21,6 +21,7 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     this.transactionsService.get().subscribe((response: Transaction[]) => {
       this.transactions = response;
+      this.calculateBalance();
     });
   }
 
@@ -33,6 +34,22 @@ export class HomeComponent implements OnInit {
         this.transactions = this.transactions.filter(
           (transaction) => transaction.id !== transactionId
         );
+        // Actualiza el balance
+        this.calculateBalance();
       });
+  }
+
+  /**
+   * Función que recalcula las cantidades del componente Balance
+   */
+  calculateBalance() {
+    let income: number = 0;
+    let expenses: number = 0;
+    this.transactions.forEach((transaction) => {
+      if (transaction.type === 'expense') expenses += transaction.amount;
+      if (transaction.type === 'income') income += transaction.amount;
+    });
+    const amount: number = income - expenses;
+    this.balance = { amount, income, expenses };
   }
 }
