@@ -18,4 +18,8 @@ export class TransactionsService {
   public create(transaction: Transaction): Observable<Transaction> {
     return this.httpClient.post<Transaction>(this.url, transaction);
   }
+
+  public remove(transactionId: string): Observable<Transaction> {
+    return this.httpClient.delete<Transaction>(`${this.url}/${transactionId}`);
+  }
 }

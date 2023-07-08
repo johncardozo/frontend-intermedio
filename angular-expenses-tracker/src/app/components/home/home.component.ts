@@ -25,9 +25,14 @@ export class HomeComponent implements OnInit {
   }
 
   removeTransaction(transactionId: string) {
-    // Revome a transaction given its id
-    this.transactions = this.transactions.filter(
-      (transaction) => transaction.id !== transactionId
-    );
+    this.transactionsService
+      .remove(transactionId)
+      .subscribe((response: Transaction) => {
+        console.log(response);
+        // Elimina la transacción del FE
+        this.transactions = this.transactions.filter(
+          (transaction) => transaction.id !== transactionId
+        );
+      });
   }
 }
