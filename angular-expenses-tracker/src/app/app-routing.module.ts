@@ -9,6 +9,11 @@ const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'add', component: AddTransactionComponent },
   { path: 'about', component: AboutComponent },
+  {
+    path: 'auth',
+    loadChildren: () =>
+      import('./auth/auth.module').then((module) => module.AuthModule),
+  },
 ];
 
 @NgModule({
