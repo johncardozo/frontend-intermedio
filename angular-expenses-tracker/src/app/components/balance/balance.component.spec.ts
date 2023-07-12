@@ -52,7 +52,7 @@ describe('BalanceComponent', () => {
 
   it('should have the right amount, income and expenses', () => {
     component.balance = {
-      amount: 100,
+      amount: 200,
       income: 300,
       expenses: 100,
     };
