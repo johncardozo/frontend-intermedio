@@ -23,7 +23,7 @@ describe('BalanceComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should display the right amount, income and expenses', () => {
+  it('should display amount, income and expenses', () => {
     // Establece el valor de una propiedad del componente
     component.balance = {
       amount: 100,
@@ -39,7 +39,7 @@ describe('BalanceComponent', () => {
 
     // Ejecuta la prueba para verificar el valor de income
     const incomeElement = compiled.querySelector(
-      '.balance__info div:nth-child(1) h3'
+      '.balance__info div:first-child h3'
     );
     expect(incomeElement?.textContent).toBe('$150.00');
 
@@ -48,5 +48,17 @@ describe('BalanceComponent', () => {
       '.balance__info div:nth-child(2) h3'
     );
     expect(expensesElement?.textContent).toBe('$50.00');
+  });
+
+  it('should have the right amount, income and expenses', () => {
+    component.balance = {
+      amount: 100,
+      income: 300,
+      expenses: 100,
+    };
+    fixture.detectChanges();
+    expect(component.balance.amount).toBe(
+      component.balance.income - component.balance.expenses
+    );
   });
 });
