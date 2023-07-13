@@ -32,4 +32,11 @@ describe('TransactionsService', () => {
       done();
     });
   });
+
+  it('should have the right amount', (done) => {
+    service.getById('jrtupEp').subscribe((transaction: Transaction) => {
+      expect(transaction.amount).toBe(200);
+      done();
+    });
+  });
 });
