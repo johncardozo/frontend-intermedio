@@ -24,4 +24,12 @@ describe('TransactionsService', () => {
       done();
     });
   });
+
+  it('should get the right type of a transaction', (done) => {
+    service.get().subscribe((transactions: Transaction[]) => {
+      const transaction: Transaction = transactions[3];
+      expect(transaction.type).toBe('income');
+      done();
+    });
+  });
 });
