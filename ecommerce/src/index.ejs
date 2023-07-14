@@ -42,16 +42,16 @@
 
   <!-- Add your organization's prod import map URL to this script's src  -->
   <!-- <script type="systemjs-importmap" src="/importmap.json"></script> -->
-
+<!-- "@single-spa/welcome": "https://unpkg.com/single-spa-welcome/dist/single-spa-welcome.js", -->
   <% if (isLocal) { %>
   <script type="systemjs-importmap">
     {
       "imports": {
         "react": "https://cdn.jsdelivr.net/npm/react@17.0.2/umd/react.production.min.js",
-        "react-dom": "https://cdn.jsdelivr.net/npm/react-dom@17.0.2/umd/react-dom.production.min.js",
-        "@single-spa/welcome": "https://unpkg.com/single-spa-welcome/dist/single-spa-welcome.js",
+        "react-dom": "https://cdn.jsdelivr.net/npm/react-dom@17.0.2/umd/react-dom.production.min.js",        
         "@ecommerce/root-config": "//localhost:9000/ecommerce-root-config.js",
-        "@team-product/mf-product": "//localhost:8080/team-product-mf-product.js"
+        "@team-product/mf-product": "//localhost:8080/team-product-mf-product.js",
+        "@mf-reviews/mf-reviews": "//localhost:4200/main.js"
       }
     }
   </script>
@@ -61,7 +61,7 @@
     If you need to support Angular applications, uncomment the script tag below to ensure only one instance of ZoneJS is loaded
     Learn more about why at https://single-spa.js.org/docs/ecosystem-angular/#zonejs
   -->
-  <!-- <script src="https://cdn.jsdelivr.net/npm/zone.js@0.11.3/dist/zone.min.js"></script> -->
+  <script src="https://cdn.jsdelivr.net/npm/zone.js@0.11.3/dist/zone.min.js"></script>
 
   <script src="https://cdn.jsdelivr.net/npm/import-map-overrides@2.2.0/dist/import-map-overrides.js"></script>
   <% if (isLocal) { %>
