@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Root Config</title>
+  <title>Atenea Ecommerce</title>
 
   <!--
     Remove this if you only support browsers that support async/await.
@@ -47,8 +47,11 @@
   <script type="systemjs-importmap">
     {
       "imports": {
+        "react": "https://cdn.jsdelivr.net/npm/react@17.0.2/umd/react.production.min.js",
+        "react-dom": "https://cdn.jsdelivr.net/npm/react-dom@17.0.2/umd/react-dom.production.min.js",
         "@single-spa/welcome": "https://unpkg.com/single-spa-welcome/dist/single-spa-welcome.js",
-        "@ecommerce/root-config": "//localhost:9000/ecommerce-root-config.js"
+        "@ecommerce/root-config": "//localhost:9000/ecommerce-root-config.js",
+        "@team-product/mf-product": "//localhost:8080/team-product-mf-product.js"
       }
     }
   </script>
