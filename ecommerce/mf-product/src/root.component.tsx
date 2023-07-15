@@ -1,3 +1,5 @@
-export default function Root(props) {
-  return <section>{props.name} is mounted!</section>;
+import Product from "./components/Product";
+
+export default function Root() {
+  return <Product />;
 }
