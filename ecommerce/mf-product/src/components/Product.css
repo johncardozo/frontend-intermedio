@@ -19,8 +19,14 @@
 }
 .product__description p {
   font-family: "Montserrat", sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.6rem;
+  color: #808080;
+  margin: 10px 0px;
 }
 .product__description h4 {
   font-family: "Montserrat", sans-serif;
-  color: #164de4;
+  color: #1c42a9;
+  font-size: 1.1rem;
+  font-weight: 500;
 }

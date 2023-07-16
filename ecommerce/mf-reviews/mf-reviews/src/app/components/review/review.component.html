@@ -1,0 +1,23 @@
+<div class="review">
+  <div class="review__avatar">
+    <img src="{{ 'https://i.pravatar.cc/40?img=' + review.id }}" alt="" />
+  </div>
+  <div class="review__info">
+    <div class="review__top">
+      <div class="review__header">
+        <h5>{{ review.username }}</h5>
+        <h6>{{ review.date | date }}</h6>
+      </div>
+      <div class="review__likes">
+        <h3>{{ likes }}</h3>
+        <span
+          class="material-symbols-outlined likes"
+          (click)="incrementLikes()"
+        >
+          thumb_up
+        </span>
+      </div>
+    </div>
+    <p>{{ review.body }}</p>
+  </div>
+</div>

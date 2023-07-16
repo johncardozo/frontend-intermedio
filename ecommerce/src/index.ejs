@@ -53,9 +53,9 @@
         "react": "https://cdn.jsdelivr.net/npm/react@17.0.2/umd/react.production.min.js",
         "react-dom": "https://cdn.jsdelivr.net/npm/react-dom@17.0.2/umd/react-dom.production.min.js",        
         "@ecommerce/root-config": "//localhost:9000/ecommerce-root-config.js",
+        "@team-header/mf-header": "//localhost:8081/js/app.js",
         "@team-product/mf-product": "//localhost:8080/team-product-mf-product.js",
-        "@mf-reviews/mf-reviews": "//localhost:4200/main.js",
-        "@team-header/mf-header": "//localhost:8081/js/app.js"
+        "@mf-reviews/mf-reviews": "//localhost:4200/main.js"
       }
     }
   </script>
@@ -75,7 +75,13 @@
   <script src="https://cdn.jsdelivr.net/npm/systemjs@6.8.3/dist/system.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/systemjs@6.8.3/dist/extras/amd.min.js"></script>
   <% } %>
-
+  <style>
+    * {
+       margin: 0;
+       padding: 0;
+       box-sizing: border-box;
+    }
+  </style>
 </head>
 <body>
   <noscript>
